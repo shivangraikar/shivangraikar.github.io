@@ -3516,14 +3516,12 @@ input, select, textarea {
 		
 	}
 
-		#footer > .inner a:hover {
-			border-bottom-color: transparent;
-		}
 
 	#footer > .inner .menu {
 		font-size: 0.8em;
-		color: rgba(255, 255, 255, 0.15);
+		color: rgb(176, 102, 65)
 	}
+
 
 	#header + #wrapper + #footer > .inner {
 		margin: 0 auto;
