@@ -6,9 +6,9 @@ This is my personal portfolio website built using JavaScript and various web dev
 
 - **About Me**: Provide a brief introduction about myself and links to my Github, LinkedIn, and Medium accounts with the attached Resume too.
 - **Experience**: Work experience in the industry as a software developer and around notable technology stack.
-- **Education**: Highlight my proficiency in various web technologies, programming languages, and frameworks.
+- **Education**: A long haul of academic years of experience circling the software developer side that highlights my proficiency in various web technologies, programming languages, and frameworks.
 - **Projects Showcase**: Display a collection of my projects as a software developer.
-- **Contact**: Include a contact form for potential employers or clients to get in touch with me.
+- **Contact**: Includes a chatbot that enables viewers to reach out to me directly from the web.
 
 ## Technologies Used
 
@@ -17,8 +17,6 @@ This is my personal portfolio website built using JavaScript and various web dev
 - **JavaScript**: Implementing interactivity and dynamic elements.
 - **Bootstrap**: Utilizing responsive design and pre-built UI components.
 - **jQuery**: Enhancing user experience and simplifying DOM manipulation.
-- **Node.js**: Running the development server and managing dependencies.
-- **Express.js**: Creating server routes for form submissions and APIs.
 - **Git**: Version control for collaborative development and tracking changes.
 - **GitHub Pages**: Deploying the website online and hosting the portfolio.
 
