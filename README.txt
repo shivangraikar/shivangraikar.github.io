@@ -20,32 +20,6 @@ This is my personal portfolio website built using JavaScript and various web dev
 - **Git**: Version control for collaborative development and tracking changes.
 - **GitHub Pages**: Deploying the website online and hosting the portfolio.
 
-## Usage
-
-To run the portfolio website locally, follow these steps:
-
-1. Clone the repository to your local machine:
-   ```
-   git clone https://github.com/your-username/portfolio-website.git
-   ```
-
-2. Navigate to the project directory:
-   ```
-   cd portfolio-website
-   ```
-
-3. Install the required dependencies:
-   ```
-   npm install
-   ```
-
-4. Start the development server:
-   ```
-   npm start
-   ```
-
-5. Open your web browser and visit `http://localhost:3000` to view the website.
-
 ## Deployment
 
 The website is deployed and hosted using GitHub Pages. Any updates pushed to the `main` branch will automatically reflect on the live website.
@@ -60,9 +34,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Author
 
-- [Your Name](https://github.com/your-username)
+- [Shivang Raikar](https://github.com/shivangraikar)
 
 ---
-_Replace the placeholders (e.g., `your-username`, `Your Name`, etc.) with your actual information and links._
-
-In your actual README.md file, you should provide more detailed information about your portfolio website, such as the specific projects showcased, your skillset, and additional sections like acknowledgments or FAQs if needed. The above template is just a starting point to give you an idea of the structure and content you can include in the README.
