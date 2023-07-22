@@ -1,5 +1,5 @@
 # Hi there! 
-👋[Shivang Raikar]
+👋
 
 ![Profile Banner](https://github.com/shivangraikar/shivangraikar/blob/main/images/shivang.jpg)
 
@@ -27,7 +27,6 @@
 - 🌐 [Portfolio Website](https://shivangraikar.github.io)
 - 🐦 [Email](mailto:shivangraikar@gmail.com)
 - 💼 [LinkedIn](https://www.linkedin.com/in/shivang-raikar/)
-- 📧 Email: contact@your-email.com
 
 
 ## Happy Coding!
