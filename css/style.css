@@ -73,7 +73,7 @@ header .tagline {
     margin-right: 10px;
 }
 
-.section-img {
+.item-img {
     width: 100%;
     max-width: 200px;
     height: auto;
@@ -82,7 +82,7 @@ header .tagline {
     border-radius: 8px;
 }
 
-.job, .education {
+.item {
     text-align: left;
     margin-bottom: 20px;
 }
