@@ -9,52 +9,91 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <div class="content">
-        <header>
+    <header>
+        <div class="container">
             <div class="profile-pic">
                 <img src="images/profile.jpg" alt="Shivang Raikar">
             </div>
             <h1>Shivang Raikar</h1>
             <p class="tagline">Software Engineer | Data Scientist | Tech Enthusiast</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/shivangraikar" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/shiva-raikar" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/shivangraikar" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:example@example.com"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:shivangraikar@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
-        </header>
-        <main>
-            <section id="about" class="section">
-                <h2>About Me</h2>
-                <p>Short biography goes here...</p>
-            </section>
-            <section id="experience" class="section">
-                <h2>Experience</h2>
-                <p>Details of work experience go here...</p>
-            </section>
-            <section id="projects" class="section">
-                <h2>Projects</h2>
-                <div class="project">
-                    <h3>Project Title</h3>
-                    <p>Project description...</p>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2><i class="fas fa-user"></i> About Me</h2>
+                <p>I'm Shivang Raikar, a software engineer and data scientist based in Boston, MA. I specialize in Python development, data integration, and web applications.</p>
+            </div>
+        </section>
+        <section id="writing" class="section">
+            <div class="container">
+                <h2><i class="fas fa-pen"></i> Writing</h2>
+                <div class="writing-item">
+                    <img src="images/writing1.jpg" alt="Writing 1" class="section-img">
+                    <p>Check out my <a href="http://shivangraikar.webflow.io" target="_blank">blog</a> where I write about technology, software development, and data science.</p>
                 </div>
-            </section>
-            <section id="contact" class="section">
-                <h2>Contact</h2>
-                <p>Email: example@example.com</p>
-            </section>
-        </main>
-        <footer>
+            </div>
+        </section>
+        <section id="career" class="section">
+            <div class="container">
+                <h2><i class="fas fa-briefcase"></i> Career</h2>
+                <div class="job">
+                    <img src="images/job1.jpg" alt="Job 1" class="section-img">
+                    <h3>Python Developer, University of Chicago</h3>
+                    <p>Developed and optimized Sqoop scripts for data integration, enabling real-time data capture and transfer between disparate systems, improving data accuracy by 50%.</p>
+                </div>
+                <div class="job">
+                    <img src="images/job2.jpg" alt="Job 2" class="section-img">
+                    <h3>Software Engineer, Crane Payment Innovations</h3>
+                    <p>Implemented and maintained automated testing scripts within the CI/CD pipeline using tools like Jenkins, achieving a significant reduction in testing time and improving development efficiency.</p>
+                </div>
+                <div class="job">
+                    <img src="images/job3.jpg" alt="Job 3" class="section-img">
+                    <h3>Software Engineer, Firework TV</h3>
+                    <p>Developed a video commerce application using Python frameworks (Django, Flask) and Node.js on AWS to ensure a seamless user experience for our end users.</p>
+                </div>
+                <div class="job">
+                    <img src="images/job4.jpg" alt="Job 4" class="section-img">
+                    <h3>Java Full Stack Developer, Stokes Automotive</h3>
+                    <p>Co-led a web development team that increased user engagement on an e-commerce platform by 20%. Implemented comprehensive unit testing (150+ automated cases) and analytics-driven deployment for quality assurance.</p>
+                </div>
+            </div>
+        </section>
+        <section id="education" class="section">
+            <div class="container">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="education">
+                    <img src="images/education1.jpg" alt="Education 1" class="section-img">
+                    <h3>Master of Science in Computer Science, University of Massachusetts Boston</h3>
+                    <p>GPA: 3.7 | Coursework: Neural Networks, Applied Machine Learning, UI/UX Design, Biomedical Signal and Image Processing</p>
+                </div>
+                <div class="education">
+                    <img src="images/education2.jpg" alt="Education 2" class="section-img">
+                    <h3>Bachelor of Engineering in Computer Engineering, University of Mumbai</h3>
+                    <p>GPA: 8.69/10 | Coursework: Data Structures and Algorithms, Database Systems, Distributed Systems, Machine Learning, Operating Systems</p>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="section">
+            <div class="container">
+                <h2><i class="fas fa-tools"></i> Skills</h2>
+                <p>Languages: Python, Java, JavaScript, HTML/CSS, C, C++, GoLang</p>
+                <p>Tools and IDE: Git, GitHub, PyUnit, Selenium, VSCode, NetBeans, JUnit, CI/CD</p>
+                <p>Databases/Cloud: MySQL, MongoDB, PostgreSQL, AWS, Google Cloud Platform</p>
+                <p>Frameworks/Libraries: REST, Django, Flask, ReactJS, Scikit-learn, Streamlit, PyTorch, OpenCV, Angular, Node.js</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
             <p>&copy; 2024 Shivang Raikar</p>
-        </footer>
-    </div>
+        </div>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>

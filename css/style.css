@@ -9,13 +9,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 100vh;
 }
 
-.content {
+.container {
+    max-width: 800px;
     width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -23,75 +24,75 @@ body {
 }
 
 header {
-    text-align: center;
+    background-color: #333;
+    color: #fff;
     padding: 20px 0;
+    text-align: center;
 }
 
 .profile-pic img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 header .tagline {
-    font-size: 1.2em;
     margin: 10px 0;
-    color: #666;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
+    font-size: 1.2em;
 }
 
 .social-links {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .social-links a {
-    color: #333;
+    color: #fff;
     margin: 0 10px;
     text-decoration: none;
-    font-size: 1.5em;
 }
 
 .social-links a:hover {
-    color: #007BFF;
+    color: #bbb;
 }
 
 .section {
-    padding: 60px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
 .section h2 {
     font-size: 2em;
     margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.section h2 i {
+    margin-right: 10px;
+}
+
+.section-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+.job, .education {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 20px 0;
-    color: #666;
-    font-size: 0.9em;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
 }
