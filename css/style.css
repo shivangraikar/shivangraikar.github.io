@@ -58,33 +58,41 @@ header .tagline {
 
 .section {
     padding: 40px 0;
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
-.section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #333;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.section h2 i {
-    margin-right: 10px;
+.section-title {
+    font-weight: bold;
+    margin-right: 20px;
+    flex-basis: 150px;
+    text-align: left;
 }
 
 .item-img {
     width: 100%;
     max-width: 200px;
     height: auto;
-    margin: 20px 0;
+    margin: 10px 20px 10px 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     border-radius: 8px;
 }
 
 .item {
-    text-align: left;
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
+}
+
+.item h3 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.item p {
+    margin: 0;
+    font-size: 1em;
 }
 
 footer {
