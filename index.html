@@ -1,17 +1,535 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>in progress</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shivang Raikar — Software Engineer</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">SR</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#achievements" class="nav-link">Achievements</a>
+          <a href="#hobbies" class="nav-link">Hobbies</a>
+          <div class="nav-indicator"></div>
+        </div>
+      </div>
+    </nav>
+
     <main>
-        <header>
-            <h1>Shivang Raikar</h1>
-            <p>Software Engineer</p>
-        </header>
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <p class="hero-greeting">Hi there, I'm</p>
+            <h1 class="hero-name">Shivang Raikar</h1>
+            <div class="typewriter-wrap">
+              <span id="typewriter"></span><span class="cursor">|</span>
+            </div>
+            <p class="hero-description">
+              Software engineer who loves building products that matter. Scroll
+              down to get to know me or ask me anything below.
+            </p>
+            <div class="hero-cta">
+              <a href="#experience" class="btn btn-primary">Explore My Work</a>
+              <a href="mailto:shivangraikar@gmail.com" class="btn btn-secondary"
+                >Say Hello</a
+              >
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-frame">
+              <img src="shivang.jpg" alt="Shivang Raikar" loading="eager" />
+            </div>
+            <div class="image-blob"></div>
+          </div>
+        </div>
+        <div class="scroll-hint">
+          <span>Scroll to explore</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="section">
+        <h2 class="section-title animate-on-scroll">
+          <span class="section-icon">&#128188;</span> Experience
+        </h2>
+        <div class="timeline">
+          <div class="timeline-item animate-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card clay-card">
+              <div class="timeline-header">
+                <h3>Software Engineer</h3>
+                <span class="badge">Current</span>
+              </div>
+              <span class="company">Ohm</span>
+              <span class="date">2025 — Present</span>
+              <ul class="experience-bullets">
+                <li>
+                  Led development of key platform features, driving
+                  architectural decisions that improved system reliability by
+                  40%
+                </li>
+                <li>
+                  Mentored junior engineers and established code review
+                  practices across the team
+                </li>
+                <li>
+                  Designed and implemented scalable microservices handling
+                  high-throughput workloads
+                </li>
+              </ul>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">AWS</span>
+                <span class="tag">System Design</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item animate-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card clay-card">
+              <div class="timeline-header">
+                <h3>Software Engineer</h3>
+              </div>
+              <span class="company">Company Name</span>
+              <span class="date">2021 — 2023</span>
+              <ul class="experience-bullets">
+                <li>
+                  Built and shipped full-stack features across web and mobile
+                  platforms serving thousands of users
+                </li>
+                <li>
+                  Collaborated cross-functionally with design and product teams
+                  to define requirements and deliver on time
+                </li>
+                <li>
+                  Optimized database queries and API response times, reducing
+                  latency by 30%
+                </li>
+              </ul>
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item animate-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card clay-card">
+              <div class="timeline-header">
+                <h3>Software Engineering Intern</h3>
+              </div>
+              <span class="company">Company Name</span>
+              <span class="date">2020 — 2021</span>
+              <ul class="experience-bullets">
+                <li>
+                  Developed internal tools and RESTful APIs used by engineering
+                  teams across the organization
+                </li>
+                <li>
+                  Contributed to production codebases, writing well-tested and
+                  documented code
+                </li>
+                <li>
+                  Participated in agile sprints, gaining hands-on experience
+                  shipping reliable software at scale
+                </li>
+              </ul>
+              <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">REST APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section">
+        <h2 class="section-title animate-on-scroll">
+          <span class="section-icon">&#128640;</span> Projects
+        </h2>
+        <div class="bento-grid">
+          <div class="bento-item bento-large clay-card animate-on-scroll">
+            <div class="project-media">
+              <video
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster=""
+                data-src="https://your-s3-bucket.s3.amazonaws.com/project1-demo.mp4"
+              >
+                <source
+                  src="https://your-s3-bucket.s3.amazonaws.com/project1-demo.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <button class="video-play-btn" aria-label="Play video">
+                &#9654;
+              </button>
+            </div>
+            <div class="project-info">
+              <h3>Featured Project</h3>
+              <p>
+                A flagship project description. Explain what it does, the impact
+                it had, and what you learned building it.
+              </p>
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">AWS</span>
+                <span class="tag">GraphQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View Project &rarr;</a>
+                <a href="#" class="project-link">Source Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="bento-item bento-medium clay-card animate-on-scroll">
+            <div class="project-media">
+              <video
+                muted
+                loop
+                playsinline
+                preload="none"
+                data-src="https://your-s3-bucket.s3.amazonaws.com/project2-demo.mp4"
+              >
+                <source
+                  src="https://your-s3-bucket.s3.amazonaws.com/project2-demo.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <button class="video-play-btn" aria-label="Play video">
+                &#9654;
+              </button>
+            </div>
+            <div class="project-info">
+              <h3>Project Two</h3>
+              <p>
+                Another cool project. Describe the problem you solved and the
+                technology choices you made.
+              </p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View Project &rarr;</a>
+              </div>
+            </div>
+          </div>
+          <div class="bento-item bento-medium clay-card animate-on-scroll">
+            <div class="project-media">
+              <video
+                muted
+                loop
+                playsinline
+                preload="none"
+                data-src="https://your-s3-bucket.s3.amazonaws.com/project3-demo.mp4"
+              >
+                <source
+                  src="https://your-s3-bucket.s3.amazonaws.com/project3-demo.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <button class="video-play-btn" aria-label="Play video">
+                &#9654;
+              </button>
+            </div>
+            <div class="project-info">
+              <h3>Project Three</h3>
+              <p>
+                Describe this project's purpose, your role, and the technical
+                challenges you overcame.
+              </p>
+              <div class="tags">
+                <span class="tag">TypeScript</span>
+                <span class="tag">Docker</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View Project &rarr;</a>
+              </div>
+            </div>
+          </div>
+          <div class="bento-item bento-small clay-card animate-on-scroll">
+            <div class="project-info">
+              <h3>Side Project</h3>
+              <p>
+                A smaller passion project that shows your curiosity and range.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link">View &rarr;</a>
+              </div>
+            </div>
+          </div>
+          <div class="bento-item bento-small clay-card animate-on-scroll">
+            <div class="project-info">
+              <h3>Open Source</h3>
+              <p>Contributions or tools you've built for the community.</p>
+              <div class="project-links">
+                <a href="#" class="project-link">View &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="section">
+        <h2 class="section-title animate-on-scroll">
+          <span class="section-icon">&#127891;</span> Education
+        </h2>
+        <div class="education-grid">
+          <div class="clay-card education-card animate-on-scroll">
+            <div class="edu-icon">&#127979;</div>
+            <h3>Master of Science in Computer Science</h3>
+            <span class="company">University Name</span>
+            <span class="date">2021 — 2023</span>
+            <p>
+              Relevant coursework: Distributed Systems, Machine Learning,
+              Advanced Algorithms, Cloud Computing.
+            </p>
+          </div>
+          <div class="clay-card education-card animate-on-scroll">
+            <div class="edu-icon">&#127979;</div>
+            <h3>Bachelor of Engineering</h3>
+            <span class="company">University Name</span>
+            <span class="date">2017 — 2021</span>
+            <p>
+              Relevant coursework: Data Structures, Operating Systems, Database
+              Management, Software Engineering.
+            </p>
+          </div>
+          <div class="clay-card education-card animate-on-scroll">
+            <div class="edu-icon">&#128187;</div>
+            <h3>Technical Diploma in Computer Engineering</h3>
+            <span class="company">Institute Name</span>
+            <span class="date">2014 — 2017</span>
+            <p>
+              Relevant coursework: Programming Fundamentals, Computer Networks,
+              Web Development, Hardware & Microprocessors.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements Section -->
+      <section id="achievements" class="section">
+        <h2 class="section-title animate-on-scroll">
+          <span class="section-icon">&#127942;</span> Achievements
+        </h2>
+        <div class="achievements-grid">
+          <div class="clay-card achievement-card animate-on-scroll">
+            <div class="achievement-icon">&#11088;</div>
+            <h3>Achievement Title</h3>
+            <p>Brief description of what you achieved and why it mattered.</p>
+          </div>
+          <div class="clay-card achievement-card animate-on-scroll">
+            <div class="achievement-icon">&#127941;</div>
+            <h3>Award or Recognition</h3>
+            <p>Describe the award, competition, or recognition you received.</p>
+          </div>
+          <div class="clay-card achievement-card animate-on-scroll">
+            <div class="achievement-icon">&#128221;</div>
+            <h3>Publication or Talk</h3>
+            <p>Details about a paper, talk, or presentation you delivered.</p>
+          </div>
+          <div class="clay-card achievement-card animate-on-scroll">
+            <div class="achievement-icon">&#128161;</div>
+            <h3>Hackathon Win</h3>
+            <p>Describe the hackathon, your solution, and the outcome.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hobbies Section -->
+      <section id="hobbies" class="section">
+        <h2 class="section-title animate-on-scroll">
+          <span class="section-icon">&#127912;</span> Hobbies
+        </h2>
+        <div class="hobbies-grid">
+          <div
+            class="clay-card hobby-card animate-on-scroll"
+            style="--rotation: -2deg"
+          >
+            <div class="hobby-icon">&#127928;</div>
+            <h3>Music</h3>
+            <p>
+              Playing guitar, discovering new genres, or jamming with friends.
+            </p>
+          </div>
+          <div
+            class="clay-card hobby-card animate-on-scroll"
+            style="--rotation: 1.5deg"
+          >
+            <div class="hobby-icon">&#9992;&#65039;</div>
+            <h3>Travel</h3>
+            <p>
+              Exploring new cities, cultures, and cuisines around the world.
+            </p>
+          </div>
+          <div
+            class="clay-card hobby-card animate-on-scroll"
+            style="--rotation: -1deg"
+          >
+            <div class="hobby-icon">&#128214;</div>
+            <h3>Reading</h3>
+            <p>Non-fiction, tech blogs, and the occasional sci-fi novel.</p>
+          </div>
+          <div
+            class="clay-card hobby-card animate-on-scroll"
+            style="--rotation: 2deg"
+          >
+            <div class="hobby-icon">&#127939;</div>
+            <h3>Fitness</h3>
+            <p>Running, hiking, and staying active to keep the mind sharp.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section id="blog" class="section">
+        <h2 class="section-title animate-on-scroll">
+          <span class="section-icon">&#9997;&#65039;</span> Blog
+        </h2>
+        <div class="blog-preview animate-on-scroll">
+          <div class="clay-card blog-card">
+            <div class="blog-image">
+              <img
+                src="https://via.placeholder.com/600x300/F2CC8F/2D3436?text=Blog+Post"
+                alt="Blog post preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="blog-info">
+              <h3>I Write About Things I Learn</h3>
+              <p>
+                Thoughts on software engineering, leadership, building products,
+                and lessons from the trenches. Check out my latest posts on
+                Medium.
+              </p>
+              <a
+                href="https://medium.com/@yourusername"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read on Medium &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-tagline">Let's build something great together.</p>
+        <div class="social-links">
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://instagram.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.882 0 1.441 1.441 0 012.882 0z"
+              />
+            </svg>
+          </a>
+          <a
+            href="mailto:your.email@example.com"
+            class="social-link"
+            aria-label="Email"
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+              />
+              <path
+                d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="footer-copy">
+          &copy; 2026 Shivang Raikar. Built with curiosity and coffee.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Interview Me Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+      <button class="chat-toggle" id="chatToggle" aria-label="Interview me">
+        <span class="chat-toggle-icon">&#128172;</span>
+        <span class="chat-toggle-text">Interview Me</span>
+      </button>
+      <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+          <h4>Interview Me</h4>
+          <p>Ask me anything — I'll do my best!</p>
+          <button class="chat-close" id="chatClose" aria-label="Close chat">
+            &times;
+          </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="chat-message bot-message">
+            <p>
+              Hey! I'm Shivang's personal assistant. Ask me things like "What do
+              you do?" or "Tell me about your projects." Fire away!
+            </p>
+          </div>
+        </div>
+        <form class="chat-input-area" id="chatForm">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Type a question..."
+            autocomplete="off"
+          />
+          <button type="submit" class="chat-send" aria-label="Send">
+            &#10148;
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
