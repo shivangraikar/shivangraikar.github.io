@@ -156,20 +156,99 @@
         });
     }
 
-    // --- Video Play Buttons ---
-    document.querySelectorAll('.video-play-btn').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            var media = this.closest('.project-media');
-            var video = media ? media.querySelector('video') : null;
-            if (!video) return;
+    // --- Video Thumbnail (seek to data-thumb-time and pause) ---
+    document.querySelectorAll('video[data-thumb-time]').forEach(function (video) {
+        var thumbTime = parseFloat(video.getAttribute('data-thumb-time')) || 2;
+        var hasThumb = false;
 
+        function seekToThumb() {
+            if (hasThumb) return;
+            hasThumb = true;
+            video.currentTime = thumbTime;
+            // Video is already paused, browser will render this frame as the preview
+        }
+
+        video.addEventListener('loadeddata', seekToThumb);
+
+        // If already loaded (cached)
+        if (video.readyState >= 2) {
+            seekToThumb();
+        }
+    });
+
+    // --- Video Play Buttons & Timeline ---
+    function formatTime(seconds) {
+        if (!seconds || isNaN(seconds)) return '0:00';
+        var m = Math.floor(seconds / 60);
+        var s = Math.floor(seconds % 60);
+        return m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    document.querySelectorAll('.project-media').forEach(function (media) {
+        var video = media.querySelector('video');
+        var playBtn = media.querySelector('.video-play-btn');
+        var timeline = media.querySelector('.video-timeline');
+        var progress = media.querySelector('.video-progress');
+        var timeDisplay = media.querySelector('.video-time');
+
+        if (!video || !playBtn) return;
+
+        var firstPlay = true;
+
+        // Play/pause toggle
+        function togglePlay() {
             if (video.paused) {
+                // On first play, start from beginning (video may be seeked for thumbnail)
+                if (firstPlay) {
+                    video.currentTime = 0;
+                    firstPlay = false;
+                }
                 video.play();
-                this.classList.add('playing');
+                playBtn.classList.add('playing');
+                media.classList.add('playing');
             } else {
                 video.pause();
-                this.classList.remove('playing');
+                playBtn.classList.remove('playing');
+                media.classList.remove('playing');
             }
+        }
+
+        playBtn.addEventListener('click', togglePlay);
+
+        // Click on video to toggle play
+        video.addEventListener('click', togglePlay);
+
+        // Update progress bar
+        if (progress && timeDisplay) {
+            video.addEventListener('timeupdate', function () {
+                if (!video.duration) return;
+                var pct = (video.currentTime / video.duration) * 100;
+                progress.style.setProperty('--progress', pct + '%');
+                timeDisplay.textContent = formatTime(video.currentTime) + ' / ' + formatTime(video.duration);
+            });
+
+            video.addEventListener('loadedmetadata', function () {
+                timeDisplay.textContent = '0:00 / ' + formatTime(video.duration);
+            });
+        }
+
+        // Click on timeline to seek
+        if (timeline && progress) {
+            timeline.addEventListener('click', function (e) {
+                e.stopPropagation();
+                var rect = progress.getBoundingClientRect();
+                var clickX = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+                var ratio = clickX / rect.width;
+                if (video.duration) {
+                    video.currentTime = ratio * video.duration;
+                }
+            });
+        }
+
+        // Show play button again when video ends (for non-loop)
+        video.addEventListener('ended', function () {
+            playBtn.classList.remove('playing');
+            media.classList.remove('playing');
         });
     });
 

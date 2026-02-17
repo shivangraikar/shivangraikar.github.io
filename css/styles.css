@@ -633,6 +633,100 @@ a:hover { color: var(--accent-2); }
 
 .video-play-btn.playing { opacity: 0; pointer-events: none; }
 
+/* Video Timeline */
+.video-timeline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 32px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 12px 8px;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity var(--transition);
+    z-index: 3;
+    cursor: pointer;
+}
+
+.project-media:hover .video-timeline,
+.project-media.playing .video-timeline {
+    opacity: 1;
+}
+
+.video-progress {
+    flex: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: height 0.15s ease;
+}
+
+.video-timeline:hover .video-progress {
+    height: 6px;
+}
+
+.video-progress::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: var(--progress, 0%);
+    background: var(--accent-1);
+    border-radius: 4px;
+    transition: width 0.1s linear;
+}
+
+.video-time {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    padding-bottom: 1px;
+}
+
+/* Mobile App (Portrait) Layout */
+[data-layout="mobile"].bento-large {
+    grid-template-columns: auto 1fr;
+}
+
+[data-layout="mobile"] .project-media {
+    aspect-ratio: 9 / 16;
+    min-height: 0;
+    max-height: 420px;
+    width: auto;
+}
+
+[data-layout="mobile"].bento-large .project-media {
+    min-height: 0;
+    width: 240px;
+}
+
+[data-layout="mobile"].bento-medium {
+    flex-direction: row;
+}
+
+[data-layout="mobile"].bento-medium .project-media {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+[data-layout="mobile"].bento-medium .project-info {
+    flex: 1;
+}
+
+[data-layout="mobile"] .project-media video {
+    object-fit: contain;
+    background: var(--bg-alt);
+}
+
 .project-info h3 {
     font-family: var(--font-display);
     font-size: 1.15rem;
@@ -1151,6 +1245,11 @@ a:hover { color: var(--accent-2); }
     }
 
     .bento-large .project-media { min-height: 200px; }
+
+    [data-layout="mobile"].bento-large { grid-template-columns: 1fr; }
+    [data-layout="mobile"].bento-large .project-media { width: 100%; max-height: 360px; }
+    [data-layout="mobile"].bento-medium { flex-direction: column; }
+    [data-layout="mobile"].bento-medium .project-media { width: 100%; max-height: 320px; }
 
     .education-grid { grid-template-columns: 1fr; }
 
