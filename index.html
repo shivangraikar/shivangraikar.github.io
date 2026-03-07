@@ -1,452 +1,793 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shivang Raikar | Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Nerdy Wallpaper Canvas -->
+    <canvas id="nerdBg"></canvas>
+
     <!-- Desktop -->
     <div class="desktop" id="desktop">
-        <!-- Bio Card on Desktop -->
-        <div class="desktop-bio">
-            <img src="shivang.jpg" alt="Shivang Raikar" class="bio-photo">
-            <div class="bio-text">
-                <h1>Shivang Raikar</h1>
-                <p>Software Engineer based in San Francisco, CA. I build full-stack applications, multi-agent AI systems, and scalable cloud platforms. MS in Computer Science from UMass Boston.</p>
-                <div class="bio-links">
-                    <a href="mailto:shivangraikar@gmail.com" class="bio-link">Email</a>
-                    <a href="https://www.linkedin.com/in/shivang-raikar/" target="_blank" class="bio-link">LinkedIn</a>
-                    <a href="https://github.com/shivangraikar" target="_blank" class="bio-link">GitHub</a>
-                    <a href="https://medium.com/@shivangraikar" target="_blank" class="bio-link">Medium</a>
-                </div>
-            </div>
+      <!-- Bio Card on Desktop -->
+      <div class="desktop-bio">
+        <img src="shivang.jpg" alt="Shivang Raikar" class="bio-photo" />
+        <div class="bio-text">
+          <h1>Shivang Raikar</h1>
+          <p>
+            Software Engineer in San Francisco. I ship full-stack apps, wrangle
+            multi-agent AI systems, and occasionally argue with YAML files until
+            they cooperate. I've built everything from mobile apps for field
+            technicians to RAG-powered document intelligence — if it involves
+            code, cloud, and a little chaos, I'm in. Currently making machines
+            smarter at OHM so humans can be lazier (in a good way).
+          </p>
+          <div class="bio-links">
+            <a href="mailto:shivangraikar@gmail.com" class="bio-link">Email</a>
+            <a
+              href="https://www.linkedin.com/in/shivang-raikar/"
+              target="_blank"
+              class="bio-link"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/shivangraikar"
+              target="_blank"
+              class="bio-link"
+              >GitHub</a
+            >
+            <a
+              href="https://medium.com/@shivangraikar"
+              target="_blank"
+              class="bio-link"
+              >Medium</a
+            >
+          </div>
         </div>
+      </div>
 
-        <!-- Desktop Icons -->
-        <div class="desktop-icons">
-            <div class="desktop-icon" data-window="work-experience" tabindex="0">
-                <div class="icon-img folder-icon"></div>
-                <span>Work Experience</span>
-            </div>
-            <div class="desktop-icon" data-window="projects" tabindex="0">
-                <div class="icon-img folder-icon"></div>
-                <span>Projects</span>
-            </div>
-            <div class="desktop-icon" data-window="hobbies" tabindex="0">
-                <div class="icon-img folder-icon"></div>
-                <span>Hobbies</span>
-            </div>
-            <div class="desktop-icon" data-window="misc" tabindex="0">
-                <div class="icon-img folder-icon"></div>
-                <span>Misc</span>
-            </div>
-            <div class="desktop-icon" data-window="blogs" tabindex="0">
-                <div class="icon-img notepad-icon"></div>
-                <span>Blogs</span>
-            </div>
+      <!-- Desktop Icons -->
+      <div class="desktop-icons">
+        <div class="desktop-icon" data-window="work-experience" tabindex="0">
+          <div class="icon-img folder-icon"></div>
+          <span>Work Experience</span>
         </div>
+        <div class="desktop-icon" data-window="projects" tabindex="0">
+          <div class="icon-img folder-icon"></div>
+          <span>Projects</span>
+        </div>
+        <div class="desktop-icon" data-window="hobbies" tabindex="0">
+          <div class="icon-img folder-icon"></div>
+          <span>Hobbies</span>
+        </div>
+        <div class="desktop-icon" data-window="misc" tabindex="0">
+          <div class="icon-img folder-icon"></div>
+          <span>Misc</span>
+        </div>
+        <div class="desktop-icon" data-window="blogs" tabindex="0">
+          <div class="icon-img notepad-icon"></div>
+          <span>Blogs</span>
+        </div>
+        <div class="desktop-icon" data-window="interview" tabindex="0">
+          <div class="icon-img chat-icon"></div>
+          <span>Interview Me</span>
+        </div>
+      </div>
     </div>
 
     <!-- ===== WINDOW: Work Experience ===== -->
-    <div class="xp-window" id="window-work-experience" style="display:none;">
-        <div class="title-bar">
-            <div class="title-bar-icon folder-icon-sm"></div>
-            <span class="title-bar-text">Work Experience</span>
-            <div class="title-bar-controls">
-                <button class="btn-minimize" aria-label="Minimize"></button>
-                <button class="btn-maximize" aria-label="Maximize"></button>
-                <button class="btn-close" aria-label="Close"></button>
-            </div>
+    <div class="xp-window" id="window-work-experience" style="display: none">
+      <div class="title-bar">
+        <div class="title-bar-icon folder-icon-sm"></div>
+        <span class="title-bar-text">Work Experience</span>
+        <div class="title-bar-controls">
+          <button class="btn-minimize" aria-label="Minimize"></button>
+          <button class="btn-maximize" aria-label="Maximize"></button>
+          <button class="btn-close" aria-label="Close"></button>
         </div>
-        <div class="window-toolbar">
-            <span>File</span><span>Edit</span><span>View</span><span>Help</span>
+      </div>
+      <div class="window-toolbar">
+        <span>File</span><span>Edit</span><span>View</span><span>Help</span>
+      </div>
+      <div class="window-body">
+        <div class="job-card">
+          <div class="job-header">
+            <h3>Software Engineer</h3>
+            <span class="job-company">OHM</span>
+            <span class="job-meta"
+              >San Francisco, CA &bull; Jan 2025 &ndash; Present</span
+            >
+          </div>
+          <ul>
+            <li>
+              Developing a multi-agent AI system for natural-language querying
+              of operational data (payments, invoices, service history, client
+              records), leveraging LLM orchestration patterns and TanStack
+              Query-based caching.
+            </li>
+            <li>
+              Architected and built &ldquo;OhmControl,&rdquo; an operations
+              platform using Next.js, React, and Django, providing real-time
+              visibility into client servicing and job scheduling for EV charger
+              and HVAC maintenance; reduced service-status lookup time by 40%.
+            </li>
+            <li>
+              Shipped a React Native mobile application used by field
+              technicians to perform on-site inspections and servicing on EV
+              chargers and HVAC systems.
+            </li>
+            <li>
+              Designed secure RESTful APIs for enterprise clients to ingest and
+              retrieve structured data across 10,000+ work orders and 100+
+              customers on Google Cloud with AWS-backed object storage.
+            </li>
+          </ul>
+          <div class="tech-tags">
+            <span>React</span><span>React Native</span
+            ><span>TanStack Query</span><span>Supabase</span><span>Django</span
+            ><span>Google Cloud</span>
+          </div>
         </div>
-        <div class="window-body">
-            <div class="job-card">
-                <div class="job-header">
-                    <h3>Software Engineer</h3>
-                    <span class="job-company">OHM</span>
-                    <span class="job-meta">San Francisco, CA &bull; Jan 2025 &ndash; Present</span>
-                </div>
-                <ul>
-                    <li>Developing a multi-agent AI system for natural-language querying of operational data (payments, invoices, service history, client records), leveraging LLM orchestration patterns and TanStack Query-based caching.</li>
-                    <li>Architected and built &ldquo;OhmControl,&rdquo; an operations platform using Next.js, React, and Django, providing real-time visibility into client servicing and job scheduling for EV charger and HVAC maintenance; reduced service-status lookup time by 40%.</li>
-                    <li>Shipped a React Native mobile application used by field technicians to perform on-site inspections and servicing on EV chargers and HVAC systems.</li>
-                    <li>Designed secure RESTful APIs for enterprise clients to ingest and retrieve structured data across 10,000+ work orders and 100+ customers on Google Cloud with AWS-backed object storage.</li>
-                </ul>
-                <div class="tech-tags">
-                    <span>React</span><span>React Native</span><span>TanStack Query</span><span>Supabase</span><span>Django</span><span>Google Cloud</span>
-                </div>
-            </div>
 
-            <div class="job-card">
-                <div class="job-header">
-                    <h3>Software Engineer</h3>
-                    <span class="job-company">Steam Works Studio</span>
-                    <span class="job-meta">Downingtown, PA &bull; Aug 2024 &ndash; Jan 2025</span>
-                </div>
-                <ul>
-                    <li>Engineered a full-stack RAG-powered document intelligence system using Python, Django, and LangChain, enabling natural-language querying across curriculum materials and assessment data for K-12 education institutions.</li>
-                    <li>Built a PDF and document parsing pipeline processing 1,000+ pages with chunking, embedding generation (OpenAI), and vector storage to power semantic search.</li>
-                    <li>Expanded the platform to serve clients in insurance, clinical, and legal domains, supporting 200+ daily active users with sub-200ms response times.</li>
-                    <li>Optimized document ingestion and retrieval workflows using PostgreSQL, Redis caching, and AWS infrastructure.</li>
-                </ul>
-                <div class="tech-tags">
-                    <span>Next.js</span><span>Django</span><span>AWS</span><span>RAG</span><span>LLMs</span><span>PostgreSQL</span><span>Redis</span>
-                </div>
-            </div>
-
-            <div class="job-card">
-                <div class="job-header">
-                    <h3>Research Software Engineer</h3>
-                    <span class="job-company">MPsych Lab, UMass Boston</span>
-                    <span class="job-meta">Boston, MA &bull; Aug 2023 &ndash; Feb 2024</span>
-                </div>
-                <ul>
-                    <li>Leveraged University of Chicago datasets for cancer patient analysis; built an interactive visualization tool for treatment outcome leaderboards across 5,000+ patient records.</li>
-                    <li>Optimized 12+ API scripts and serializers, improving data accuracy from raw AWS S3 buckets by 50%.</li>
-                    <li>Engineered data handling and migration strategies for 10,000+ records using MySQL and Pandas.</li>
-                </ul>
-                <div class="tech-tags">
-                    <span>React.js</span><span>TypeScript</span><span>Node.js</span><span>REST APIs</span><span>GitHub CI/CD</span>
-                </div>
-            </div>
-
-            <div class="job-card">
-                <div class="job-header">
-                    <h3>Software Engineer</h3>
-                    <span class="job-company">Crane Payment Innovations</span>
-                    <span class="job-meta">Malvern, PA &bull; Jun 2022 &ndash; Dec 2022</span>
-                </div>
-                <ul>
-                    <li>Developed a transaction-based verification system for cash and coin flows across 10,000+ devices in casinos and vending machines nationwide.</li>
-                    <li>Implemented CI/CD testing solutions using Java, Selenium, JUnit, Jenkins, and Maven; authored 150 test scripts.</li>
-                    <li>Designed 4 POCs to validate core business logic, reducing manual cash audit time by 65%, processing $2M+ in daily transactions with 99.9% accuracy.</li>
-                </ul>
-                <div class="tech-tags">
-                    <span>Maven</span><span>Selenium</span><span>JUnit</span><span>Jenkins</span><span>TestNG</span><span>AWS</span>
-                </div>
-            </div>
+        <div class="job-card">
+          <div class="job-header">
+            <h3>Software Engineer</h3>
+            <span class="job-company">Steam Works Studio</span>
+            <span class="job-meta"
+              >Downingtown, PA &bull; Aug 2024 &ndash; Jan 2025</span
+            >
+          </div>
+          <ul>
+            <li>
+              Engineered a full-stack RAG-powered document intelligence system
+              using Python, Django, and LangChain, enabling natural-language
+              querying across curriculum materials and assessment data for K-12
+              education institutions.
+            </li>
+            <li>
+              Built a PDF and document parsing pipeline processing 1,000+ pages
+              with chunking, embedding generation (OpenAI), and vector storage
+              to power semantic search.
+            </li>
+            <li>
+              Expanded the platform to serve clients in insurance, clinical, and
+              legal domains, supporting 200+ daily active users with sub-200ms
+              response times.
+            </li>
+            <li>
+              Optimized document ingestion and retrieval workflows using
+              PostgreSQL, Redis caching, and AWS infrastructure.
+            </li>
+          </ul>
+          <div class="tech-tags">
+            <span>Next.js</span><span>Django</span><span>AWS</span
+            ><span>RAG</span><span>LLMs</span><span>PostgreSQL</span
+            ><span>Redis</span>
+          </div>
         </div>
+
+        <div class="job-card">
+          <div class="job-header">
+            <h3>Research Software Engineer</h3>
+            <span class="job-company">MPsych Lab, UMass Boston</span>
+            <span class="job-meta"
+              >Boston, MA &bull; Aug 2023 &ndash; Feb 2024</span
+            >
+          </div>
+          <ul>
+            <li>
+              Leveraged University of Chicago datasets for cancer patient
+              analysis; built an interactive visualization tool for treatment
+              outcome leaderboards across 5,000+ patient records.
+            </li>
+            <li>
+              Optimized 12+ API scripts and serializers, improving data accuracy
+              from raw AWS S3 buckets by 50%.
+            </li>
+            <li>
+              Engineered data handling and migration strategies for 10,000+
+              records using MySQL and Pandas.
+            </li>
+          </ul>
+          <div class="tech-tags">
+            <span>React.js</span><span>TypeScript</span><span>Node.js</span
+            ><span>REST APIs</span><span>GitHub CI/CD</span>
+          </div>
+        </div>
+
+        <div class="job-card">
+          <div class="job-header">
+            <h3>Software Engineer</h3>
+            <span class="job-company">Crane Payment Innovations</span>
+            <span class="job-meta"
+              >Malvern, PA &bull; Jun 2022 &ndash; Dec 2022</span
+            >
+          </div>
+          <ul>
+            <li>
+              Developed a transaction-based verification system for cash and
+              coin flows across 10,000+ devices in casinos and vending machines
+              nationwide.
+            </li>
+            <li>
+              Implemented CI/CD testing solutions using Java, Selenium, JUnit,
+              Jenkins, and Maven; authored 150 test scripts.
+            </li>
+            <li>
+              Designed 4 POCs to validate core business logic, reducing manual
+              cash audit time by 65%, processing $2M+ in daily transactions with
+              99.9% accuracy.
+            </li>
+          </ul>
+          <div class="tech-tags">
+            <span>Maven</span><span>Selenium</span><span>JUnit</span
+            ><span>Jenkins</span><span>TestNG</span><span>AWS</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ===== WINDOW: Projects ===== -->
-    <div class="xp-window" id="window-projects" style="display:none;">
-        <div class="title-bar">
-            <div class="title-bar-icon folder-icon-sm"></div>
-            <span class="title-bar-text">Projects</span>
-            <div class="title-bar-controls">
-                <button class="btn-minimize" aria-label="Minimize"></button>
-                <button class="btn-maximize" aria-label="Maximize"></button>
-                <button class="btn-close" aria-label="Close"></button>
+    <div class="xp-window" id="window-projects" style="display: none">
+      <div class="title-bar">
+        <div class="title-bar-icon folder-icon-sm"></div>
+        <span class="title-bar-text">Projects</span>
+        <div class="title-bar-controls">
+          <button class="btn-minimize" aria-label="Minimize"></button>
+          <button class="btn-maximize" aria-label="Maximize"></button>
+          <button class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-toolbar">
+        <span>File</span><span>Edit</span><span>View</span><span>Help</span>
+      </div>
+      <div class="window-body">
+        <div class="project-grid">
+          <div class="project-card">
+            <div class="project-icon">&#128218;</div>
+            <h3>RAG Document Intelligence</h3>
+            <p>
+              Full-stack RAG-powered system using Django &amp; LangChain for
+              natural-language querying across documents. Processes 1,000+ pages
+              with semantic search for education, insurance, and legal domains.
+            </p>
+            <div class="tech-tags">
+              <span>Django</span><span>LangChain</span><span>OpenAI</span
+              ><span>PostgreSQL</span>
             </div>
-        </div>
-        <div class="window-toolbar">
-            <span>File</span><span>Edit</span><span>View</span><span>Help</span>
-        </div>
-        <div class="window-body">
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-icon">&#128218;</div>
-                    <h3>RAG Document Intelligence</h3>
-                    <p>Full-stack RAG-powered system using Django &amp; LangChain for natural-language querying across documents. Processes 1,000+ pages with semantic search for education, insurance, and legal domains.</p>
-                    <div class="tech-tags"><span>Django</span><span>LangChain</span><span>OpenAI</span><span>PostgreSQL</span></div>
-                    <a href="https://github.com/shivangraikar" target="_blank" class="project-link">&#128279; View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">&#9889;</div>
-                    <h3>OhmControl Platform</h3>
-                    <p>Operations platform built with Next.js, React, and Django providing real-time visibility into EV charger and HVAC maintenance job scheduling. Reduced service-status lookup time by 40%.</p>
-                    <div class="tech-tags"><span>Next.js</span><span>React</span><span>Django</span><span>Supabase</span></div>
-                    <a href="https://github.com/shivangraikar" target="_blank" class="project-link">&#128279; View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">&#128241;</div>
-                    <h3>Field Technician Mobile App</h3>
-                    <p>React Native mobile app for on-site inspections and servicing of EV chargers and HVAC systems. Captures real-time diagnostic data feeding into customer-facing dashboards.</p>
-                    <div class="tech-tags"><span>React Native</span><span>Supabase</span><span>Google Cloud</span></div>
-                    <a href="https://github.com/shivangraikar" target="_blank" class="project-link">&#128279; View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">&#128202;</div>
-                    <h3>Cancer Treatment Visualization</h3>
-                    <p>Interactive visualization tool for treatment outcome leaderboards using University of Chicago datasets, enabling clinicians to compare protocol efficacy across 5,000+ patient records.</p>
-                    <div class="tech-tags"><span>React</span><span>TypeScript</span><span>Node.js</span><span>D3.js</span></div>
-                    <a href="https://github.com/shivangraikar" target="_blank" class="project-link">&#128279; View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">&#128176;</div>
-                    <h3>Transaction Verification System</h3>
-                    <p>Validation system for cash and coin flows across 10,000+ devices in casinos and vending machines. Processes $2M+ in daily transactions with 99.9% accuracy.</p>
-                    <div class="tech-tags"><span>Java</span><span>Selenium</span><span>Jenkins</span><span>AWS</span></div>
-                    <a href="https://github.com/shivangraikar" target="_blank" class="project-link">&#128279; View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">&#129302;</div>
-                    <h3>Multi-Agent AI System</h3>
-                    <p>AI system for natural-language querying of operational data including payments, invoices, service history, and client records. Uses LLM orchestration and TanStack Query caching.</p>
-                    <div class="tech-tags"><span>LLMs</span><span>TanStack Query</span><span>Python</span><span>React</span></div>
-                    <a href="https://github.com/shivangraikar" target="_blank" class="project-link">&#128279; View on GitHub</a>
-                </div>
+            <a
+              href="https://github.com/shivangraikar"
+              target="_blank"
+              class="project-link"
+              >&#128279; View on GitHub</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#9889;</div>
+            <h3>OhmControl Platform</h3>
+            <p>
+              Operations platform built with Next.js, React, and Django
+              providing real-time visibility into EV charger and HVAC
+              maintenance job scheduling. Reduced service-status lookup time by
+              40%.
+            </p>
+            <div class="tech-tags">
+              <span>Next.js</span><span>React</span><span>Django</span
+              ><span>Supabase</span>
             </div>
+            <a
+              href="https://github.com/shivangraikar"
+              target="_blank"
+              class="project-link"
+              >&#128279; View on GitHub</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#128241;</div>
+            <h3>Field Technician Mobile App</h3>
+            <p>
+              React Native mobile app for on-site inspections and servicing of
+              EV chargers and HVAC systems. Captures real-time diagnostic data
+              feeding into customer-facing dashboards.
+            </p>
+            <div class="tech-tags">
+              <span>React Native</span><span>Supabase</span
+              ><span>Google Cloud</span>
+            </div>
+            <a
+              href="https://github.com/shivangraikar"
+              target="_blank"
+              class="project-link"
+              >&#128279; View on GitHub</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#128202;</div>
+            <h3>Cancer Treatment Visualization</h3>
+            <p>
+              Interactive visualization tool for treatment outcome leaderboards
+              using University of Chicago datasets, enabling clinicians to
+              compare protocol efficacy across 5,000+ patient records.
+            </p>
+            <div class="tech-tags">
+              <span>React</span><span>TypeScript</span><span>Node.js</span
+              ><span>D3.js</span>
+            </div>
+            <a
+              href="https://github.com/shivangraikar"
+              target="_blank"
+              class="project-link"
+              >&#128279; View on GitHub</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#128176;</div>
+            <h3>Transaction Verification System</h3>
+            <p>
+              Validation system for cash and coin flows across 10,000+ devices
+              in casinos and vending machines. Processes $2M+ in daily
+              transactions with 99.9% accuracy.
+            </p>
+            <div class="tech-tags">
+              <span>Java</span><span>Selenium</span><span>Jenkins</span
+              ><span>AWS</span>
+            </div>
+            <a
+              href="https://github.com/shivangraikar"
+              target="_blank"
+              class="project-link"
+              >&#128279; View on GitHub</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#129302;</div>
+            <h3>Multi-Agent AI System</h3>
+            <p>
+              AI system for natural-language querying of operational data
+              including payments, invoices, service history, and client records.
+              Uses LLM orchestration and TanStack Query caching.
+            </p>
+            <div class="tech-tags">
+              <span>LLMs</span><span>TanStack Query</span><span>Python</span
+              ><span>React</span>
+            </div>
+            <a
+              href="https://github.com/shivangraikar"
+              target="_blank"
+              class="project-link"
+              >&#128279; View on GitHub</a
+            >
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- ===== WINDOW: Hobbies ===== -->
-    <div class="xp-window" id="window-hobbies" style="display:none;">
-        <div class="title-bar">
-            <div class="title-bar-icon folder-icon-sm"></div>
-            <span class="title-bar-text">Hobbies</span>
-            <div class="title-bar-controls">
-                <button class="btn-minimize" aria-label="Minimize"></button>
-                <button class="btn-maximize" aria-label="Maximize"></button>
-                <button class="btn-close" aria-label="Close"></button>
-            </div>
+    <div class="xp-window" id="window-hobbies" style="display: none">
+      <div class="title-bar">
+        <div class="title-bar-icon folder-icon-sm"></div>
+        <span class="title-bar-text">Hobbies</span>
+        <div class="title-bar-controls">
+          <button class="btn-minimize" aria-label="Minimize"></button>
+          <button class="btn-maximize" aria-label="Maximize"></button>
+          <button class="btn-close" aria-label="Close"></button>
         </div>
-        <div class="window-toolbar">
-            <span>File</span><span>Edit</span><span>View</span><span>Help</span>
+      </div>
+      <div class="window-toolbar">
+        <span>File</span><span>Edit</span><span>View</span><span>Help</span>
+      </div>
+      <div class="window-body">
+        <div class="hobby-grid">
+          <div class="hobby-card">
+            <div class="hobby-icon">&#127925;</div>
+            <h3>Music</h3>
+            <p>
+              Passionate about music production and exploring different genres.
+              Music is my go-to creative outlet.
+            </p>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-icon">&#9992;&#65039;</div>
+            <h3>Travel</h3>
+            <p>
+              Love exploring new places, cultures, and cuisines. Traveling fuels
+              my creativity and broadens my perspective.
+            </p>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-icon">&#128218;</div>
+            <h3>Reading</h3>
+            <p>
+              Avid reader of tech blogs, non-fiction, and engineering
+              publications. Always learning something new.
+            </p>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-icon">&#127947;&#65039;</div>
+            <h3>Fitness</h3>
+            <p>
+              Committed to staying active through gym workouts and outdoor
+              activities. A healthy body powers a sharp mind.
+            </p>
+          </div>
         </div>
-        <div class="window-body">
-            <div class="hobby-grid">
-                <div class="hobby-card">
-                    <div class="hobby-icon">&#127925;</div>
-                    <h3>Music</h3>
-                    <p>Passionate about music production and exploring different genres. Music is my go-to creative outlet.</p>
-                </div>
-                <div class="hobby-card">
-                    <div class="hobby-icon">&#9992;&#65039;</div>
-                    <h3>Travel</h3>
-                    <p>Love exploring new places, cultures, and cuisines. Traveling fuels my creativity and broadens my perspective.</p>
-                </div>
-                <div class="hobby-card">
-                    <div class="hobby-icon">&#128218;</div>
-                    <h3>Reading</h3>
-                    <p>Avid reader of tech blogs, non-fiction, and engineering publications. Always learning something new.</p>
-                </div>
-                <div class="hobby-card">
-                    <div class="hobby-icon">&#127947;&#65039;</div>
-                    <h3>Fitness</h3>
-                    <p>Committed to staying active through gym workouts and outdoor activities. A healthy body powers a sharp mind.</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
     <!-- ===== WINDOW: Misc ===== -->
-    <div class="xp-window" id="window-misc" style="display:none;">
-        <div class="title-bar">
-            <div class="title-bar-icon folder-icon-sm"></div>
-            <span class="title-bar-text">Misc</span>
-            <div class="title-bar-controls">
-                <button class="btn-minimize" aria-label="Minimize"></button>
-                <button class="btn-maximize" aria-label="Maximize"></button>
-                <button class="btn-close" aria-label="Close"></button>
-            </div>
+    <div class="xp-window" id="window-misc" style="display: none">
+      <div class="title-bar">
+        <div class="title-bar-icon folder-icon-sm"></div>
+        <span class="title-bar-text">Misc</span>
+        <div class="title-bar-controls">
+          <button class="btn-minimize" aria-label="Minimize"></button>
+          <button class="btn-maximize" aria-label="Maximize"></button>
+          <button class="btn-close" aria-label="Close"></button>
         </div>
-        <div class="window-toolbar">
-            <span>File</span><span>Edit</span><span>View</span><span>Help</span>
+      </div>
+      <div class="window-toolbar">
+        <span>File</span><span>Edit</span><span>View</span><span>Help</span>
+      </div>
+      <div class="window-body">
+        <!-- Education -->
+        <div class="misc-section">
+          <h2 class="misc-heading">&#127891; Education</h2>
+          <div class="misc-cards">
+            <div class="misc-card">
+              <h3>University of Massachusetts Boston</h3>
+              <p class="misc-meta">
+                Master of Science in Computer Science &bull; May 2023
+              </p>
+              <p>Boston, Massachusetts</p>
+            </div>
+            <div class="misc-card">
+              <h3>University of Mumbai</h3>
+              <p class="misc-meta">
+                Bachelor of Engineering in Computer Engineering &bull; May 2021
+              </p>
+              <p>Mumbai, India</p>
+            </div>
+          </div>
         </div>
-        <div class="window-body">
-            <!-- Education -->
-            <div class="misc-section">
-                <h2 class="misc-heading">&#127891; Education</h2>
-                <div class="misc-cards">
-                    <div class="misc-card">
-                        <h3>University of Massachusetts Boston</h3>
-                        <p class="misc-meta">Master of Science in Computer Science &bull; May 2023</p>
-                        <p>Boston, Massachusetts</p>
-                    </div>
-                    <div class="misc-card">
-                        <h3>University of Mumbai</h3>
-                        <p class="misc-meta">Bachelor of Engineering in Computer Engineering &bull; May 2021</p>
-                        <p>Mumbai, India</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Research -->
-            <div class="misc-section">
-                <h2 class="misc-heading">&#128300; Research</h2>
-                <div class="misc-cards">
-                    <div class="misc-card">
-                        <h3>Twitter Data Mining for Targeted Marketing</h3>
-                        <p>Co-authored paper published at the 2020 Second International Conference on Inventive Research in Computing Applications (ICIRCA), Coimbatore, India, under the Machine Learning domain.</p>
-                        <div class="tech-tags"><span>Machine Learning</span><span>Data Mining</span><span>NLP</span></div>
-                    </div>
-                </div>
+        <!-- Research -->
+        <div class="misc-section">
+          <h2 class="misc-heading">&#128300; Research</h2>
+          <div class="misc-cards">
+            <div class="misc-card">
+              <h3>Twitter Data Mining for Targeted Marketing</h3>
+              <p>
+                Co-authored paper published at the 2020 Second International
+                Conference on Inventive Research in Computing Applications
+                (ICIRCA), Coimbatore, India, under the Machine Learning domain.
+              </p>
+              <div class="tech-tags">
+                <span>Machine Learning</span><span>Data Mining</span
+                ><span>NLP</span>
+              </div>
             </div>
-
-            <!-- Awards & Hackathons -->
-            <div class="misc-section">
-                <h2 class="misc-heading">&#127942; Awards &amp; Hackathons</h2>
-                <div class="misc-cards">
-                    <div class="misc-card">
-                        <h3>10+ Hackathon Wins &amp; Participations</h3>
-                        <p>Demonstrated rapid prototyping and cross-functional collaboration across 10+ hackathons.</p>
-                    </div>
-                    <div class="misc-card">
-                        <h3>Headstarter AI &ndash; Software Engineer Fellow</h3>
-                        <p>Developed 4+ full-stack SaaS products using TypeScript, NextJS, MaterialUI, Stripe API, LLMs, and Pinecone Vector DB, leading a team of 3 developers.</p>
-                        <div class="tech-tags"><span>TypeScript</span><span>Next.js</span><span>Stripe</span><span>LLMs</span><span>Pinecone</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certifications -->
-            <div class="misc-section">
-                <h2 class="misc-heading">&#128196; Certifications</h2>
-                <div class="misc-cards cert-grid">
-                    <div class="misc-card cert-card">
-                        <span>AWS AI Practitioner</span>
-                    </div>
-                    <div class="misc-card cert-card">
-                        <span>HackerRank Software Engineer</span>
-                    </div>
-                    <div class="misc-card cert-card">
-                        <span>OCI Generative AI Professional</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skills -->
-            <div class="misc-section">
-                <h2 class="misc-heading">&#128736;&#65039; Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Languages</h4>
-                        <div class="tech-tags"><span>Python</span><span>TypeScript</span><span>JavaScript</span><span>SQL</span><span>Go</span><span>Java</span><span>C++</span></div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Frameworks</h4>
-                        <div class="tech-tags"><span>React</span><span>Next.js</span><span>Django</span><span>FastAPI</span><span>Flask</span><span>Node.js</span><span>LangChain</span><span>PyTorch</span></div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Databases &amp; Cloud</h4>
-                        <div class="tech-tags"><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>DynamoDB</span><span>Supabase</span><span>AWS</span><span>GCP</span></div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Tools</h4>
-                        <div class="tech-tags"><span>Git</span><span>Docker</span><span>CI/CD</span><span>Selenium</span><span>Postman</span><span>Celery</span><span>Claude Code</span></div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <!-- Awards & Hackathons -->
+        <div class="misc-section">
+          <h2 class="misc-heading">&#127942; Awards &amp; Hackathons</h2>
+          <div class="misc-cards">
+            <div class="misc-card">
+              <h3>10+ Hackathon Wins &amp; Participations</h3>
+              <p>
+                Demonstrated rapid prototyping and cross-functional
+                collaboration across 10+ hackathons.
+              </p>
+            </div>
+            <div class="misc-card">
+              <h3>Headstarter AI &ndash; Software Engineer Fellow</h3>
+              <p>
+                Developed 4+ full-stack SaaS products using TypeScript, NextJS,
+                MaterialUI, Stripe API, LLMs, and Pinecone Vector DB, leading a
+                team of 3 developers.
+              </p>
+              <div class="tech-tags">
+                <span>TypeScript</span><span>Next.js</span><span>Stripe</span
+                ><span>LLMs</span><span>Pinecone</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="misc-section">
+          <h2 class="misc-heading">&#128196; Certifications</h2>
+          <div class="misc-cards cert-grid">
+            <div class="misc-card cert-card">
+              <span>AWS AI Practitioner</span>
+            </div>
+            <div class="misc-card cert-card">
+              <span>HackerRank Software Engineer</span>
+            </div>
+            <div class="misc-card cert-card">
+              <span>OCI Generative AI Professional</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="misc-section">
+          <h2 class="misc-heading">&#128736;&#65039; Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Languages</h4>
+              <div class="tech-tags">
+                <span>Python</span><span>TypeScript</span><span>JavaScript</span
+                ><span>SQL</span><span>Go</span><span>Java</span
+                ><span>C++</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Frameworks</h4>
+              <div class="tech-tags">
+                <span>React</span><span>Next.js</span><span>Django</span
+                ><span>FastAPI</span><span>Flask</span><span>Node.js</span
+                ><span>LangChain</span><span>PyTorch</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Databases &amp; Cloud</h4>
+              <div class="tech-tags">
+                <span>PostgreSQL</span><span>MongoDB</span><span>Redis</span
+                ><span>DynamoDB</span><span>Supabase</span><span>AWS</span
+                ><span>GCP</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Tools</h4>
+              <div class="tech-tags">
+                <span>Git</span><span>Docker</span><span>CI/CD</span
+                ><span>Selenium</span><span>Postman</span><span>Celery</span
+                ><span>Claude Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ===== WINDOW: Blogs ===== -->
-    <div class="xp-window" id="window-blogs" style="display:none;">
-        <div class="title-bar">
-            <div class="title-bar-icon folder-icon-sm"></div>
-            <span class="title-bar-text">Blogs</span>
-            <div class="title-bar-controls">
-                <button class="btn-minimize" aria-label="Minimize"></button>
-                <button class="btn-maximize" aria-label="Maximize"></button>
-                <button class="btn-close" aria-label="Close"></button>
+    <div class="xp-window" id="window-blogs" style="display: none">
+      <div class="title-bar">
+        <div class="title-bar-icon folder-icon-sm"></div>
+        <span class="title-bar-text">Blogs</span>
+        <div class="title-bar-controls">
+          <button class="btn-minimize" aria-label="Minimize"></button>
+          <button class="btn-maximize" aria-label="Maximize"></button>
+          <button class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-toolbar">
+        <span>File</span><span>Edit</span><span>View</span><span>Help</span>
+      </div>
+      <div class="window-body">
+        <p class="blog-intro">
+          My writings on Medium &mdash;
+          <a
+            href="https://medium.com/@shivangraikar"
+            target="_blank"
+            class="blog-medium-link"
+            >View all posts on Medium &#8599;</a
+          >
+        </p>
+        <div class="blog-grid">
+          <a
+            href="https://medium.com/@shivangraikar/building-a-flow-log-parser-da8644175be7"
+            target="_blank"
+            class="blog-card"
+          >
+            <div class="blog-thumbnail blog-thumb-code">
+              <span>&#128187;</span>
             </div>
-        </div>
-        <div class="window-toolbar">
-            <span>File</span><span>Edit</span><span>View</span><span>Help</span>
-        </div>
-        <div class="window-body">
-            <p class="blog-intro">My writings on Medium &mdash; <a href="https://medium.com/@shivangraikar" target="_blank" class="blog-medium-link">View all posts on Medium &#8599;</a></p>
-            <div class="blog-grid">
-                <a href="https://medium.com/@shivangraikar/building-a-flow-log-parser-da8644175be7" target="_blank" class="blog-card">
-                    <div class="blog-thumbnail blog-thumb-code">
-                        <span>&#128187;</span>
-                    </div>
-                    <div class="blog-info">
-                        <h3>Building a Flow Log Parser &mdash; Streamlit</h3>
-                        <p class="blog-date">December 4, 2024</p>
-                        <p>A technical assessment turned into a full Streamlit web app &mdash; upload flow log files and lookup tables, process data, and visualize results in real time.</p>
-                    </div>
-                </a>
-                <a href="https://medium.com/analytics-vidhya/wordcloud-generator-using-python-and-flask-afd1bed1c578" target="_blank" class="blog-card">
-                    <div class="blog-thumbnail blog-thumb-data">
-                        <span>&#9729;&#65039;</span>
-                    </div>
-                    <div class="blog-info">
-                        <h3>WordCloud Generator using Python and Flask</h3>
-                        <p class="blog-date">July 1, 2020 &bull; Analytics Vidhya</p>
-                        <p>Built a local web app using the Python wordcloud library and Flask for creating wordclouds that even unfamiliar users could use. Published in Analytics Vidhya.</p>
-                    </div>
-                </a>
-                <a href="https://medium.com/@shivangraikar/mind-your-most-powerful-weapon-5a1a1a414d02" target="_blank" class="blog-card">
-                    <div class="blog-thumbnail blog-thumb-mind">
-                        <span>&#129504;</span>
-                    </div>
-                    <div class="blog-info">
-                        <h3>Mind: Your Most Powerful Weapon</h3>
-                        <p class="blog-date">June 11, 2020</p>
-                        <p>A reflection on how the human mind communicates through five senses, creating impulses of thoughts &mdash; and how surrounding yourself with good influences and meditation can shape your path.</p>
-                    </div>
-                </a>
+            <div class="blog-info">
+              <h3>Building a Flow Log Parser &mdash; Streamlit</h3>
+              <p class="blog-date">December 4, 2024</p>
+              <p>
+                A technical assessment turned into a full Streamlit web app
+                &mdash; upload flow log files and lookup tables, process data,
+                and visualize results in real time.
+              </p>
             </div>
+          </a>
+          <a
+            href="https://medium.com/analytics-vidhya/wordcloud-generator-using-python-and-flask-afd1bed1c578"
+            target="_blank"
+            class="blog-card"
+          >
+            <div class="blog-thumbnail blog-thumb-data">
+              <span>&#9729;&#65039;</span>
+            </div>
+            <div class="blog-info">
+              <h3>WordCloud Generator using Python and Flask</h3>
+              <p class="blog-date">July 1, 2020 &bull; Analytics Vidhya</p>
+              <p>
+                Built a local web app using the Python wordcloud library and
+                Flask for creating wordclouds that even unfamiliar users could
+                use. Published in Analytics Vidhya.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://medium.com/@shivangraikar/mind-your-most-powerful-weapon-5a1a1a414d02"
+            target="_blank"
+            class="blog-card"
+          >
+            <div class="blog-thumbnail blog-thumb-mind">
+              <span>&#129504;</span>
+            </div>
+            <div class="blog-info">
+              <h3>Mind: Your Most Powerful Weapon</h3>
+              <p class="blog-date">June 11, 2020</p>
+              <p>
+                A reflection on how the human mind communicates through five
+                senses, creating impulses of thoughts &mdash; and how
+                surrounding yourself with good influences and meditation can
+                shape your path.
+              </p>
+            </div>
+          </a>
         </div>
+      </div>
+    </div>
+
+    <!-- ===== WINDOW: Interview Me ===== -->
+    <div class="xp-window" id="window-interview" style="display: none">
+      <div class="title-bar">
+        <div class="title-bar-icon folder-icon-sm"></div>
+        <span class="title-bar-text">Interview Me — Shivang.exe</span>
+        <div class="title-bar-controls">
+          <button class="btn-minimize" aria-label="Minimize"></button>
+          <button class="btn-maximize" aria-label="Maximize"></button>
+          <button class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-toolbar">
+        <span>File</span><span>Edit</span><span>View</span><span>Help</span>
+      </div>
+      <div class="window-body interview-body">
+        <div class="interview-chat" id="interviewChat">
+          <div class="chat-msg bot-msg">
+            <span class="chat-sender">Shivang.exe</span>
+            <p>
+              Hey! I'm Shivang's digital twin. Ask me anything about my
+              experience, tech stack, what I'm building, or why I think tabs are
+              superior to spaces. Pick a question below or type your own!
+            </p>
+          </div>
+        </div>
+        <div class="interview-suggestions" id="interviewSuggestions">
+          <button class="suggestion-btn" data-q="Tell me about yourself">
+            Tell me about yourself
+          </button>
+          <button class="suggestion-btn" data-q="What's your tech stack?">
+            What's your tech stack?
+          </button>
+          <button
+            class="suggestion-btn"
+            data-q="What are you working on right now?"
+          >
+            What are you working on?
+          </button>
+          <button class="suggestion-btn" data-q="What's your proudest project?">
+            Proudest project?
+          </button>
+          <button class="suggestion-btn" data-q="Why should we hire you?">
+            Why should we hire you?
+          </button>
+          <button
+            class="suggestion-btn"
+            data-q="What do you do outside of coding?"
+          >
+            Outside of coding?
+          </button>
+          <button class="suggestion-btn" data-q="What's a fun fact about you?">
+            Fun fact?
+          </button>
+          <button
+            class="suggestion-btn"
+            data-q="How do you approach debugging?"
+          >
+            How do you debug?
+          </button>
+        </div>
+        <div class="interview-input">
+          <input
+            type="text"
+            id="interviewInput"
+            placeholder="Type a question..."
+            autocomplete="off"
+          />
+          <button id="interviewSend">Ask</button>
+        </div>
+      </div>
     </div>
 
     <!-- ===== TASKBAR ===== -->
     <div class="taskbar">
-        <button class="start-btn" id="startBtn">
-            <div class="start-logo"></div>
-            <span>start</span>
-        </button>
-        <div class="taskbar-divider"></div>
-        <div class="taskbar-windows" id="taskbarWindows"></div>
-        <div class="system-tray">
-            <span class="tray-clock" id="trayClock"></span>
-        </div>
+      <button class="start-btn" id="startBtn">
+        <div class="start-logo"></div>
+        <span>start</span>
+      </button>
+      <div class="taskbar-divider"></div>
+      <div class="taskbar-windows" id="taskbarWindows"></div>
+      <div class="system-tray">
+        <span class="tray-clock" id="trayClock"></span>
+      </div>
     </div>
 
     <!-- Start Menu -->
-    <div class="start-menu" id="startMenu" style="display:none;">
-        <div class="start-menu-header">
-            <img src="shivang.jpg" alt="Shivang" class="start-menu-avatar">
-            <span>Shivang Raikar</span>
+    <div class="start-menu" id="startMenu" style="display: none">
+      <div class="start-menu-header">
+        <img src="shivang.jpg" alt="Shivang" class="start-menu-avatar" />
+        <span>Shivang Raikar</span>
+      </div>
+      <div class="start-menu-body">
+        <div class="start-menu-left">
+          <div class="start-menu-item" data-window="work-experience">
+            <div class="smi-icon folder-icon-sm"></div>
+            <span>Work Experience</span>
+          </div>
+          <div class="start-menu-item" data-window="projects">
+            <div class="smi-icon folder-icon-sm"></div>
+            <span>Projects</span>
+          </div>
+          <div class="start-menu-item" data-window="hobbies">
+            <div class="smi-icon folder-icon-sm"></div>
+            <span>Hobbies</span>
+          </div>
+          <div class="start-menu-item" data-window="misc">
+            <div class="smi-icon folder-icon-sm"></div>
+            <span>Misc</span>
+          </div>
+          <div class="start-menu-item" data-window="blogs">
+            <div class="smi-icon folder-icon-sm"></div>
+            <span>Blogs</span>
+          </div>
+          <div class="start-menu-item" data-window="interview">
+            <div class="smi-icon folder-icon-sm"></div>
+            <span>Interview Me</span>
+          </div>
         </div>
-        <div class="start-menu-body">
-            <div class="start-menu-left">
-                <div class="start-menu-item" data-window="work-experience">
-                    <div class="smi-icon folder-icon-sm"></div>
-                    <span>Work Experience</span>
-                </div>
-                <div class="start-menu-item" data-window="projects">
-                    <div class="smi-icon folder-icon-sm"></div>
-                    <span>Projects</span>
-                </div>
-                <div class="start-menu-item" data-window="hobbies">
-                    <div class="smi-icon folder-icon-sm"></div>
-                    <span>Hobbies</span>
-                </div>
-                <div class="start-menu-item" data-window="misc">
-                    <div class="smi-icon folder-icon-sm"></div>
-                    <span>Misc</span>
-                </div>
-                <div class="start-menu-item" data-window="blogs">
-                    <div class="smi-icon folder-icon-sm"></div>
-                    <span>Blogs</span>
-                </div>
-            </div>
-            <div class="start-menu-right">
-                <a href="mailto:shivangraikar@gmail.com" class="start-menu-item">
-                    <span>&#9993; Email Me</span>
-                </a>
-                <a href="https://www.linkedin.com/in/shivang-raikar/" target="_blank" class="start-menu-item">
-                    <span>&#128100; LinkedIn</span>
-                </a>
-                <a href="https://github.com/shivangraikar" target="_blank" class="start-menu-item">
-                    <span>&#128187; GitHub</span>
-                </a>
-            </div>
+        <div class="start-menu-right">
+          <a href="mailto:shivangraikar@gmail.com" class="start-menu-item">
+            <span>&#9993; Email Me</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/shivang-raikar/"
+            target="_blank"
+            class="start-menu-item"
+          >
+            <span>&#128100; LinkedIn</span>
+          </a>
+          <a
+            href="https://github.com/shivangraikar"
+            target="_blank"
+            class="start-menu-item"
+          >
+            <span>&#128187; GitHub</span>
+          </a>
         </div>
-        <div class="start-menu-footer">
-            <a href="https://medium.com/@shivangraikar" target="_blank" class="start-menu-item">
-                <span>&#128221; Read my Blog</span>
-            </a>
-        </div>
+      </div>
+      <div class="start-menu-footer">
+        <a
+          href="https://medium.com/@shivangraikar"
+          target="_blank"
+          class="start-menu-item"
+        >
+          <span>&#128221; Read my Blog</span>
+        </a>
+      </div>
     </div>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
