@@ -15,6 +15,10 @@ deliberate. Do not introduce npm/bundlers unless Shivang explicitly asks.
 - `js/script.js` — three IIFEs: animated "nerd wallpaper" canvas, XP window
   manager (drag/minimize/maximize/close/taskbar/z-order), Interview Me chatbot
 - `js/games.js` — Minesweeper + Klondike Solitaire (click-to-move, draw-1)
+- `js/breakout.js` — Breakout.exe: canvas paddle/ball, the real desktop icons
+  and bio card are the bricks (bio = 3-hit boss). Win → fake ShivangXP
+  shutdown/reboot finale; 3 drops → game over. Desktop-only (mobile gets an
+  XP dialog). Elements hide via `visibility` (keeps layout) and restore after.
 - `ShivangRaikar_Resume.pdf` — linked from the Resume.pdf desktop icon and start menu
 - `shivang.jpg` — profile photo
 

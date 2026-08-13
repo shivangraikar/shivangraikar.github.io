@@ -309,7 +309,11 @@
     grad.addColorStop(1, "#1941a5");
     ctx.fillStyle = grad;
     ctx.beginPath();
-    ctx.roundRect(paddleX - PADDLE_W / 2, py, PADDLE_W, PADDLE_H, 7);
+    if (ctx.roundRect) {
+      ctx.roundRect(paddleX - PADDLE_W / 2, py, PADDLE_W, PADDLE_H, 7);
+    } else {
+      ctx.rect(paddleX - PADDLE_W / 2, py, PADDLE_W, PADDLE_H);
+    }
     ctx.fill();
     ctx.strokeStyle = "rgba(255,255,255,0.5)";
     ctx.lineWidth = 1;

@@ -1644,6 +1644,290 @@ a {
   text-align: center;
 }
 
+/* ========== BREAKOUT.EXE ========== */
+
+/* Icon: paddle + ball (CSS-drawn) */
+.breakout-icon {
+  width: 48px;
+  height: 40px;
+  position: relative;
+}
+
+.breakout-icon::before {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 8px;
+  width: 32px;
+  height: 8px;
+  background: linear-gradient(180deg, #4d94f7, #1941a5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.breakout-icon::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle at 35% 30%, #fff, #b0b0b0);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+
+#breakoutCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  pointer-events: none;
+}
+
+#breakoutHud {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5001;
+  background: rgba(10, 15, 30, 0.85);
+  border: 1px solid rgba(100, 200, 255, 0.35);
+  border-radius: 6px;
+  color: #c0dff6;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  text-align: center;
+  pointer-events: none;
+}
+
+#breakoutHud .bh-lives {
+  color: #ff6b6b;
+  letter-spacing: 2px;
+  margin-right: 8px;
+}
+
+#breakoutHud .bh-msg {
+  margin-top: 3px;
+  color: #64c8ff;
+}
+
+/* Disable desktop interaction while playing */
+body.breakout-active .desktop {
+  pointer-events: none;
+}
+
+/* Brick destruction */
+.brick-poof {
+  transition:
+    transform 0.25s ease-in,
+    opacity 0.25s ease-in;
+  transform: scale(0.1) rotate(25deg);
+  opacity: 0;
+}
+
+/* Boss (bio card) damage states */
+.boss-hit-1 {
+  transform: rotate(-1deg);
+  filter: contrast(1.15);
+}
+
+.boss-hit-2 {
+  transform: rotate(1.5deg) scale(0.98);
+  opacity: 0.75;
+  filter: saturate(0.5) contrast(1.2);
+}
+
+@keyframes brickShake {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  25% {
+    translate: -5px 2px;
+  }
+  50% {
+    translate: 4px -2px;
+  }
+  75% {
+    translate: -3px 1px;
+  }
+}
+
+.brick-shake {
+  animation: brickShake 0.3s ease;
+}
+
+/* XP-style dialog */
+.xp-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.xp-dialog {
+  width: 360px;
+  max-width: 90vw;
+  background: #ece9d8;
+  border: 2px solid #0054e3;
+  border-radius: 8px 8px 4px 4px;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.xp-dialog-title {
+  cursor: default;
+}
+
+.xp-dialog-body {
+  padding: 16px;
+}
+
+.xp-dialog-body p {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.xp-dialog-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.xp-dialog-btns button {
+  background: linear-gradient(180deg, #fff, #ece9d8);
+  border: 1px solid #003c74;
+  border-radius: 3px;
+  padding: 4px 16px;
+  font-size: 12px;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.xp-dialog-btns button:hover {
+  box-shadow: 0 0 0 2px #f8b944 inset;
+}
+
+/* Finale screens */
+#breakoutFinale {
+  position: fixed;
+  inset: 0;
+  z-index: 10002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.finale-center p {
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.finale-shutdown {
+  background: linear-gradient(180deg, #3f8cf3, #1941a5 40%, #0f2a6e);
+  color: #fff;
+}
+
+.finale-black {
+  background: #000;
+}
+
+.finale-amber {
+  color: #ffb400;
+  font-size: 26px !important;
+  font-weight: 700;
+  line-height: 1.5;
+  font-family: "Courier New", monospace;
+}
+
+.finale-dim {
+  color: #444;
+  font-size: 12px !important;
+  margin-top: 24px !important;
+}
+
+.finale-boot {
+  background: #000;
+  color: #fff;
+}
+
+.finale-boot h2 {
+  font-size: 34px;
+  font-style: italic;
+  margin-top: 14px;
+}
+
+.finale-boot h2 span {
+  color: #f8b944;
+  font-size: 20px;
+  vertical-align: super;
+}
+
+.finale-logo {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+  background: linear-gradient(
+    135deg,
+    #ff0000 0%,
+    #ff0000 25%,
+    #00ff00 25%,
+    #00ff00 50%,
+    #0000ff 50%,
+    #0000ff 75%,
+    #ffcc00 75%,
+    #ffcc00 100%
+  );
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.boot-bar {
+  width: 200px;
+  height: 16px;
+  margin: 30px auto 0;
+  border: 2px solid #888;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.boot-chunk {
+  position: absolute;
+  top: 2px;
+  width: 24px;
+  height: 8px;
+  background: linear-gradient(180deg, #4d94f7, #1941a5);
+  border-radius: 3px;
+  animation: bootSlide 1.4s linear infinite;
+}
+
+.boot-chunk:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.boot-chunk:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes bootSlide {
+  from {
+    left: -30px;
+  }
+  to {
+    left: 210px;
+  }
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .desktop {
