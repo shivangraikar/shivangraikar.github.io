@@ -1,7 +1,9 @@
 // ============================================
 // BREAKOUT.EXE — destroy the desktop
-// Paddle + ball on a canvas overlay; the real
+// Paddle + balls on a canvas overlay; the real
 // desktop icons and bio card are the bricks.
+// A ×5 power-up drops from the sky: catch it
+// with the paddle to split into 5 balls.
 // ============================================
 
 (function () {
@@ -17,12 +19,18 @@
   var BASE_SPEED = 340; // px/sec
   var MAX_SPEED = 720;
   var BOSS_HP = 3;
+  var MAX_BALLS = 5;
+  var DROP_W = 34;
+  var DROP_H = 18;
+  var DROP_SPEED = 130; // px/sec
 
   var canvas, ctx, hud;
   var state = "idle"; // idle | aiming | playing | finale
   var targets = [];
   var paddleX = 0;
-  var ball = { x: 0, y: 0, vx: 0, vy: 0, speed: BASE_SPEED };
+  var balls = [];
+  var drops = [];
+  var nextDropAt = 0;
   var lives = 3;
   var destroyed = 0;
   var startTime = 0;
@@ -108,29 +116,61 @@
     destroyed = 0;
     aimMoved = 0;
     lastMouseX = null;
+    drops = [];
     startTime = performance.now();
     paddleX = window.innerWidth / 2;
-    resetBall();
+    resetBalls();
     state = "aiming";
     lastFrame = performance.now();
     rafId = requestAnimationFrame(loop);
   }
 
-  function resetBall() {
-    ball.x = paddleX;
-    ball.y = paddleY() - BALL_R - 2;
-    ball.speed = BASE_SPEED;
-    ball.vx = 0;
-    ball.vy = 0;
+  function resetBalls() {
+    balls = [
+      {
+        x: paddleX,
+        y: paddleY() - BALL_R - 2,
+        vx: 0,
+        vy: 0,
+        speed: BASE_SPEED,
+      },
+    ];
+    drops = [];
   }
 
   function launchBall() {
     if (state !== "aiming") return;
     state = "playing";
+    var b = balls[0];
     var angle = (Math.random() * 0.6 - 0.3) - Math.PI / 2; // mostly upward
-    ball.vx = Math.cos(angle) * ball.speed;
-    ball.vy = Math.sin(angle) * ball.speed;
+    b.vx = Math.cos(angle) * b.speed;
+    b.vy = Math.sin(angle) * b.speed;
+    nextDropAt = performance.now() + 6000 + Math.random() * 5000;
     updateHud(null);
+  }
+
+  function multiplyBalls() {
+    var src = balls.slice();
+    var i = 0;
+    while (balls.length < MAX_BALLS) {
+      var orig = src[i % src.length];
+      i++;
+      var speed = orig.speed;
+      var angle = Math.atan2(orig.vy, orig.vx) + (Math.random() * 1.4 - 0.7);
+      // Keep clones heading upward-ish so they don't instantly drain
+      if (Math.sin(angle) > 0.3) angle = -angle;
+      balls.push({
+        x: orig.x,
+        y: orig.y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        speed: speed,
+      });
+    }
+    updateHud("×5 MULTIBALL!");
+    setTimeout(function () {
+      if (state === "playing") updateHud(null);
+    }, 1500);
   }
 
   function endGame(won) {
@@ -179,18 +219,74 @@
     lastFrame = now;
 
     if (state === "aiming") {
-      ball.x = paddleX;
-      ball.y = paddleY() - BALL_R - 2;
+      balls[0].x = paddleX;
+      balls[0].y = paddleY() - BALL_R - 2;
     } else if (state === "playing") {
-      stepBall(dt);
+      step(dt, now);
     }
     if (state === "aiming" || state === "playing") {
-      draw();
+      draw(now);
       rafId = requestAnimationFrame(loop);
     }
   }
 
-  function stepBall(dt) {
+  function step(dt, now) {
+    // Spawn a power drop from the sky
+    if (
+      now > nextDropAt &&
+      drops.length === 0 &&
+      balls.length < MAX_BALLS
+    ) {
+      drops.push({
+        x: 60 + Math.random() * (canvas.width - 120),
+        y: -DROP_H,
+        born: now,
+      });
+      nextDropAt = now + 10000 + Math.random() * 6000;
+    }
+
+    // Move drops, catch with paddle
+    var py = paddleY();
+    for (var d = drops.length - 1; d >= 0; d--) {
+      var drop = drops[d];
+      drop.y += DROP_SPEED * dt;
+      var dropX = drop.x + Math.sin((now - drop.born) / 300) * 14;
+      if (
+        drop.y + DROP_H / 2 >= py &&
+        drop.y - DROP_H / 2 <= py + PADDLE_H + 6 &&
+        dropX + DROP_W / 2 >= paddleX - PADDLE_W / 2 &&
+        dropX - DROP_W / 2 <= paddleX + PADDLE_W / 2
+      ) {
+        drops.splice(d, 1);
+        multiplyBalls();
+      } else if (drop.y - DROP_H > canvas.height) {
+        drops.splice(d, 1);
+      }
+    }
+
+    // Move balls
+    for (var i = balls.length - 1; i >= 0; i--) {
+      var ball = balls[i];
+      stepBall(ball, dt);
+      if (ball.y - BALL_R > canvas.height + 10) {
+        balls.splice(i, 1);
+      }
+    }
+
+    // All balls gone → lose a life
+    if (balls.length === 0) {
+      lives--;
+      if (lives <= 0) {
+        endGame(false);
+        return;
+      }
+      state = "aiming";
+      resetBalls();
+      updateHud("Ball lost! Click or press Space to relaunch");
+    }
+  }
+
+  function stepBall(ball, dt) {
     ball.x += ball.vx * dt;
     ball.y += ball.vy * dt;
 
@@ -227,19 +323,6 @@
       ball.y = py - BALL_R;
     }
 
-    // Fell off the bottom
-    if (ball.y - BALL_R > canvas.height + 10) {
-      lives--;
-      if (lives <= 0) {
-        endGame(false);
-        return;
-      }
-      state = "aiming";
-      resetBall();
-      updateHud("Ball lost! Click or press Space to relaunch");
-      return;
-    }
-
     // Bricks
     for (var i = 0; i < targets.length; i++) {
       var t = targets[i];
@@ -271,6 +354,8 @@
     if (t.hp <= 0) {
       t.alive = false;
       destroyed++;
+      // Clear damage-state transforms so the poof animation wins
+      t.el.classList.remove("boss-hit-1", "boss-hit-2", "brick-shake");
       t.el.classList.add("brick-poof");
       (function (el) {
         setTimeout(function () {
@@ -298,7 +383,7 @@
 
   // ---------- Rendering ----------
 
-  function draw() {
+  function draw(now) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Paddle
@@ -319,23 +404,59 @@
     ctx.lineWidth = 1;
     ctx.stroke();
 
-    // Ball
-    var bg = ctx.createRadialGradient(
-      ball.x - 3,
-      ball.y - 3,
-      1,
-      ball.x,
-      ball.y,
-      BALL_R
-    );
-    bg.addColorStop(0, "#ffffff");
-    bg.addColorStop(1, "#c0c0c0");
-    ctx.fillStyle = bg;
-    ctx.beginPath();
-    ctx.arc(ball.x, ball.y, BALL_R, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.strokeStyle = "rgba(0,0,0,0.35)";
-    ctx.stroke();
+    // Power drops
+    drops.forEach(function (drop) {
+      var dx = drop.x + Math.sin((now - drop.born) / 300) * 14;
+      var dg = ctx.createLinearGradient(
+        0,
+        drop.y - DROP_H / 2,
+        0,
+        drop.y + DROP_H / 2
+      );
+      dg.addColorStop(0, "#ffd76e");
+      dg.addColorStop(1, "#e8940a");
+      ctx.fillStyle = dg;
+      ctx.beginPath();
+      if (ctx.roundRect) {
+        ctx.roundRect(
+          dx - DROP_W / 2,
+          drop.y - DROP_H / 2,
+          DROP_W,
+          DROP_H,
+          9
+        );
+      } else {
+        ctx.rect(dx - DROP_W / 2, drop.y - DROP_H / 2, DROP_W, DROP_H);
+      }
+      ctx.fill();
+      ctx.strokeStyle = "rgba(255,255,255,0.7)";
+      ctx.stroke();
+      ctx.fillStyle = "#5c3a00";
+      ctx.font = "bold 11px 'Segoe UI', Tahoma, sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText("×5", dx, drop.y + 1);
+    });
+
+    // Balls
+    balls.forEach(function (ball) {
+      var bg = ctx.createRadialGradient(
+        ball.x - 3,
+        ball.y - 3,
+        1,
+        ball.x,
+        ball.y,
+        BALL_R
+      );
+      bg.addColorStop(0, "#ffffff");
+      bg.addColorStop(1, "#c0c0c0");
+      ctx.fillStyle = bg;
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, BALL_R, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = "rgba(0,0,0,0.35)";
+      ctx.stroke();
+    });
   }
 
   function updateHud(msg) {
@@ -347,11 +468,13 @@
     for (var i = 0; i < 3; i++) {
       hearts += i < lives ? "●" : "○";
     }
+    var ballInfo = balls.length > 1 ? " • Balls: " + balls.length : "";
     hud.innerHTML =
       "<span class='bh-lives'>" +
       hearts +
       "</span> Targets left: " +
       remaining +
+      ballInfo +
       " • ESC to quit" +
       (msg ? "<div class='bh-msg'>" + msg + "</div>" : "");
   }
@@ -502,9 +625,9 @@
 
   document.addEventListener("visibilitychange", function () {
     if (document.hidden && state === "playing") {
-      // Pause: park the ball on the paddle again
+      // Pause: park a single ball on the paddle again
       state = "aiming";
-      resetBall();
+      resetBalls();
       updateHud("Paused — click or press Space to relaunch");
     }
   });
