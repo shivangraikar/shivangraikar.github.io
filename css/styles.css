@@ -1348,13 +1348,42 @@ a {
 }
 
 /* Emoji-based desktop icons (games) */
-.mine-icon,
-.cards-icon {
+.mine-icon {
   width: 48px;
   height: 40px;
   font-size: 32px;
   line-height: 40px;
   text-align: center;
+}
+
+/* Cards icon (CSS-drawn): white playing card with red heart */
+.cards-icon {
+  width: 48px;
+  height: 40px;
+  position: relative;
+}
+
+.cards-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 28px;
+  height: 38px;
+  background: linear-gradient(180deg, #ffffff, #f0efe8);
+  border: 1px solid #999;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.cards-icon::after {
+  content: "A\2665";
+  position: absolute;
+  top: 2px;
+  left: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #d40000;
 }
 
 .smi-emoji {
