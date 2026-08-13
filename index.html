@@ -1009,6 +1009,78 @@
       </div>
     </div>
 
+    <!-- ===== WINDOW: Minesweeper ===== -->
+    <div
+      class="xp-window"
+      id="window-minesweeper"
+      data-width="340px"
+      data-height="470px"
+      style="display: none"
+    >
+      <div class="title-bar">
+        <div class="title-bar-icon">&#128163;</div>
+        <span class="title-bar-text">Minesweeper</span>
+        <div class="title-bar-controls">
+          <button class="btn-minimize" aria-label="Minimize"></button>
+          <button class="btn-maximize" aria-label="Maximize"></button>
+          <button class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-toolbar">
+        <span id="mineNewGame">Game</span><span>Help</span>
+      </div>
+      <div class="window-body mine-body">
+        <div class="mine-header">
+          <div class="mine-counter" id="mineCount">010</div>
+          <button class="mine-face" id="mineFace">&#128578;</button>
+          <div class="mine-counter" id="mineTimer">000</div>
+        </div>
+        <div class="mine-grid" id="mineGrid"></div>
+        <p class="mine-hint">
+          Left-click: reveal &bull; Right-click (or &#128681; mode): flag
+          <button class="mine-flag-toggle" id="mineFlagToggle">
+            &#128681; Flag mode: OFF
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <!-- ===== WINDOW: Solitaire ===== -->
+    <div
+      class="xp-window"
+      id="window-solitaire"
+      data-width="720px"
+      data-height="560px"
+      style="display: none"
+    >
+      <div class="title-bar">
+        <div class="title-bar-icon">&#127136;</div>
+        <span class="title-bar-text">Solitaire</span>
+        <div class="title-bar-controls">
+          <button class="btn-minimize" aria-label="Minimize"></button>
+          <button class="btn-maximize" aria-label="Maximize"></button>
+          <button class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-toolbar">
+        <span id="solNewGame">Game</span><span>Help</span>
+      </div>
+      <div class="window-body sol-body">
+        <div class="sol-top">
+          <div class="sol-stock-area">
+            <div class="sol-pile sol-stock" id="solStock"></div>
+            <div class="sol-pile sol-waste" id="solWaste"></div>
+          </div>
+          <div class="sol-foundations" id="solFoundations"></div>
+        </div>
+        <div class="sol-tableau" id="solTableau"></div>
+        <p class="sol-hint">
+          Click a card, then click where to move it. Double-click sends it to
+          the foundations. Click the deck to draw.
+        </p>
+      </div>
+    </div>
+
     <!-- ===== TASKBAR ===== -->
     <div class="taskbar">
       <button class="start-btn" id="startBtn">
@@ -1054,8 +1126,23 @@
             <div class="smi-icon folder-icon-sm"></div>
             <span>Interview Me</span>
           </div>
+          <div class="start-menu-item" data-window="minesweeper">
+            <span class="smi-emoji">&#128163;</span>
+            <span>Minesweeper</span>
+          </div>
+          <div class="start-menu-item" data-window="solitaire">
+            <span class="smi-emoji">&#127136;</span>
+            <span>Solitaire</span>
+          </div>
         </div>
         <div class="start-menu-right">
+          <a
+            href="ShivangRaikar_Resume.pdf"
+            target="_blank"
+            class="start-menu-item"
+          >
+            <span>&#128196; My Resume</span>
+          </a>
           <a href="mailto:shivangraikar@gmail.com" class="start-menu-item">
             <span>&#9993; Email Me</span>
           </a>
@@ -1087,5 +1174,6 @@
     </div>
 
     <script src="js/script.js"></script>
+    <script src="js/games.js"></script>
   </body>
 </html>
