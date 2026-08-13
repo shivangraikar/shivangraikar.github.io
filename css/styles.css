@@ -125,6 +125,22 @@ a {
   border-color: rgba(100, 200, 255, 0.5);
 }
 
+/* ========== DESKTOP LEFT COLUMN ========== */
+.desktop-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.desktop-icons-left {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 18px;
+  margin-left: 20px;
+  padding-right: 0;
+  gap: 8px;
+}
+
 /* ========== DESKTOP ICONS ========== */
 .desktop-icons {
   display: flex;
@@ -1695,6 +1711,10 @@ a {
 @media (max-width: 480px) {
   .desktop-icon {
     width: 80px;
+  }
+
+  .desktop-icon span {
+    font-size: 10px;
   }
 
   .folder-icon {
