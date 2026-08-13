@@ -387,8 +387,8 @@
     } else {
       el.style.top = 60 + offset + "px";
       el.style.left = 80 + offset + "px";
-      el.style.width = "700px";
-      el.style.height = "500px";
+      el.style.width = el.dataset.width || "700px";
+      el.style.height = el.dataset.height || "500px";
     }
     el.style.display = "";
 
@@ -554,20 +554,25 @@
 
   // ===== Desktop icons (double-click) =====
   document.querySelectorAll(".desktop-icon").forEach(function (icon) {
-    icon.addEventListener("dblclick", function () {
-      openWindow(icon.dataset.window);
-    });
+    // Icons with data-href open a link (e.g. Resume.pdf) instead of a window
+    function activate() {
+      if (icon.dataset.href) {
+        window.open(icon.dataset.href, "_blank");
+      } else {
+        openWindow(icon.dataset.window);
+      }
+    }
+
+    icon.addEventListener("dblclick", activate);
 
     // Also open on Enter key
     icon.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") openWindow(icon.dataset.window);
+      if (e.key === "Enter") activate();
     });
 
     // Mobile: single tap
     if ("ontouchstart" in window) {
-      icon.addEventListener("click", function () {
-        openWindow(icon.dataset.window);
-      });
+      icon.addEventListener("click", activate);
     }
   });
 
