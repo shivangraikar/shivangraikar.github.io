@@ -18,11 +18,11 @@
         <div class="bio-text">
           <h1>Shivang Raikar</h1>
           <p>
-            Software Engineer in San Francisco. I ship full-stack apps, wrangle
-            multi-agent AI systems, and occasionally argue with YAML files until
-            they cooperate. I've built everything from mobile apps for field
-            technicians to RAG-powered document intelligence if it involves
-            code, cloud, and a little chaos.
+            Founding Software Engineer at OHM in San Francisco. I take products
+            from an empty repo to real users &mdash; mobile apps on the App
+            Store, multi-agent AI systems, client-facing APIs &mdash; and
+            occasionally argue with YAML files until they cooperate. If it
+            involves code, cloud, and a little chaos, I'm in.
           </p>
           <br />
           <p>
@@ -78,6 +78,22 @@
           <div class="icon-img chat-icon"></div>
           <span>Interview Me</span>
         </div>
+        <div
+          class="desktop-icon"
+          data-href="ShivangRaikar_Resume.pdf"
+          tabindex="0"
+        >
+          <div class="icon-img pdf-icon"></div>
+          <span>Resume.pdf</span>
+        </div>
+        <div class="desktop-icon" data-window="minesweeper" tabindex="0">
+          <div class="icon-img mine-icon">&#128163;</div>
+          <span>Minesweeper</span>
+        </div>
+        <div class="desktop-icon" data-window="solitaire" tabindex="0">
+          <div class="icon-img cards-icon">&#127136;</div>
+          <span>Solitaire</span>
+        </div>
       </div>
     </div>
 
@@ -96,41 +112,45 @@
         <span>File</span><span>Edit</span><span>View</span><span>Help</span>
       </div>
       <div class="window-body">
+        <p class="workex-intro">
+          The short version of where I've been and what I shipped there. For
+          the deep dives &mdash; architecture, features, and design decisions
+          &mdash; open the <strong>Projects</strong> folder.
+        </p>
+
         <div class="job-card">
           <div class="job-header">
-            <h3>Software Engineer</h3>
+            <h3>Founding Software Engineer</h3>
             <span class="job-company">OHM</span>
             <span class="job-meta"
               >San Francisco, CA &bull; Jan 2025 &ndash; Present</span
             >
           </div>
-          <ul>
-            <li>
-              Developing a multi-agent AI system for natural-language querying
-              of operational data (payments, invoices, service history, client
-              records), leveraging LLM orchestration patterns and TanStack
-              Query-based caching.
-            </li>
-            <li>
-              Architected and built &ldquo;OhmControl,&rdquo; an operations
-              platform using Next.js, React, and Django, providing real-time
-              visibility into client servicing and job scheduling for EV charger
-              and HVAC maintenance; reduced service-status lookup time by 40%.
-            </li>
-            <li>
-              Shipped a React Native mobile application used by field
-              technicians to perform on-site inspections and servicing on EV
-              chargers and HVAC systems.
-            </li>
-            <li>
-              Designed secure RESTful APIs for enterprise clients to ingest and
-              retrieve structured data across 10,000+ work orders and 100+
-              customers on Google Cloud with AWS-backed object storage.
-            </li>
-          </ul>
+          <p class="job-blurb">
+            Core member of the founding team &mdash; from empty repos to
+            products in the field:
+          </p>
+          <div class="job-projects">
+            <div class="job-project">
+              <span class="jp-icon">&#129302;</span> Ohmie &mdash; our
+              multi-agent AI that runs operations
+            </div>
+            <div class="job-project">
+              <span class="jp-icon">&#9889;</span> OhmControl &mdash; the
+              operations command center
+            </div>
+            <div class="job-project">
+              <span class="jp-icon">&#128241;</span> Ohm Field &mdash;
+              technician app on the App Store &amp; Play Store
+            </div>
+            <div class="job-project">
+              <span class="jp-icon">&#128268;</span> Integration APIs &mdash;
+              how enterprise clients talk to us
+            </div>
+          </div>
           <div class="tech-tags">
-            <span>React</span><span>React Native</span
-            ><span>TanStack Query</span><span>Supabase</span><span>Django</span
+            <span>React</span><span>React Native</span><span>Django</span
+            ><span>LLM Orchestration</span><span>Supabase</span
             ><span>Google Cloud</span>
           </div>
         </div>
@@ -143,32 +163,26 @@
               >Downingtown, PA &bull; Aug 2024 &ndash; Jan 2025</span
             >
           </div>
-          <ul>
-            <li>
-              Engineered a full-stack RAG-powered document intelligence system
-              using Python, Django, and LangChain, enabling natural-language
-              querying across curriculum materials and assessment data for K-12
-              education institutions.
-            </li>
-            <li>
-              Built a PDF and document parsing pipeline processing 1,000+ pages
-              with chunking, embedding generation (OpenAI), and vector storage
-              to power semantic search.
-            </li>
-            <li>
-              Expanded the platform to serve clients in insurance, clinical, and
-              legal domains, supporting 200+ daily active users with sub-200ms
-              response times.
-            </li>
-            <li>
-              Optimized document ingestion and retrieval workflows using
-              PostgreSQL, Redis caching, and AWS infrastructure.
-            </li>
-          </ul>
+          <p class="job-blurb">
+            Led AI document intelligence from prototype to 200+ daily users:
+          </p>
+          <div class="job-projects">
+            <div class="job-project">
+              <span class="jp-icon">&#128218;</span> RAG document intelligence
+              platform for K-12 education
+            </div>
+            <div class="job-project">
+              <span class="jp-icon">&#128196;</span> PDF parsing &amp; embedding
+              pipeline (1,000+ pages)
+            </div>
+            <div class="job-project">
+              <span class="jp-icon">&#127970;</span> Expansion into insurance,
+              clinical &amp; legal domains
+            </div>
+          </div>
           <div class="tech-tags">
-            <span>Next.js</span><span>Django</span><span>AWS</span
-            ><span>RAG</span><span>LLMs</span><span>PostgreSQL</span
-            ><span>Redis</span>
+            <span>Django</span><span>LangChain</span><span>RAG</span
+            ><span>OpenAI</span><span>PostgreSQL</span><span>AWS</span>
           </div>
         </div>
 
@@ -180,24 +194,22 @@
               >Boston, MA &bull; Aug 2023 &ndash; Feb 2024</span
             >
           </div>
-          <ul>
-            <li>
-              Leveraged University of Chicago datasets for cancer patient
-              analysis; built an interactive visualization tool for treatment
-              outcome leaderboards across 5,000+ patient records.
-            </li>
-            <li>
-              Optimized 12+ API scripts and serializers, improving data accuracy
-              from raw AWS S3 buckets by 50%.
-            </li>
-            <li>
-              Engineered data handling and migration strategies for 10,000+
-              records using MySQL and Pandas.
-            </li>
-          </ul>
+          <p class="job-blurb">
+            Research engineering on real clinical data:
+          </p>
+          <div class="job-projects">
+            <div class="job-project">
+              <span class="jp-icon">&#128202;</span> Cancer treatment outcome
+              visualizer (5,000+ patient records)
+            </div>
+            <div class="job-project">
+              <span class="jp-icon">&#128260;</span> Data migration &amp; API
+              pipelines across disparate systems
+            </div>
+          </div>
           <div class="tech-tags">
             <span>React.js</span><span>TypeScript</span><span>Node.js</span
-            ><span>REST APIs</span><span>GitHub CI/CD</span>
+            ><span>MySQL</span><span>Pandas</span>
           </div>
         </div>
 
@@ -209,25 +221,22 @@
               >Malvern, PA &bull; Jun 2022 &ndash; Dec 2022</span
             >
           </div>
-          <ul>
-            <li>
-              Developed a transaction-based verification system for cash and
-              coin flows across 10,000+ devices in casinos and vending machines
-              nationwide.
-            </li>
-            <li>
-              Implemented CI/CD testing solutions using Java, Selenium, JUnit,
-              Jenkins, and Maven; authored 150 test scripts.
-            </li>
-            <li>
-              Designed 4 POCs to validate core business logic, reducing manual
-              cash audit time by 65%, processing $2M+ in daily transactions with
-              99.9% accuracy.
-            </li>
-          </ul>
+          <p class="job-blurb">
+            Where money literally flowed through my code:
+          </p>
+          <div class="job-projects">
+            <div class="job-project">
+              <span class="jp-icon">&#128176;</span> Cash transaction
+              verification across 10,000+ devices
+            </div>
+            <div class="job-project">
+              <span class="jp-icon">&#129514;</span> Automated test
+              infrastructure with JUnit + AWS Lambda
+            </div>
+          </div>
           <div class="tech-tags">
-            <span>Maven</span><span>Selenium</span><span>JUnit</span
-            ><span>Jenkins</span><span>TestNG</span><span>AWS</span>
+            <span>Java</span><span>Selenium</span><span>JUnit</span
+            ><span>Jenkins</span><span>Elasticsearch</span><span>AWS</span>
           </div>
         </div>
       </div>
@@ -250,16 +259,173 @@
       <div class="window-body">
         <div class="project-grid">
           <div class="project-card">
-            <div class="project-icon">&#x1F3FF;</div>
-            <h3>Fitted AI: See It. Wear It. Love It.</h3>
+            <div class="project-icon">&#129302;</div>
+            <span class="project-org org-ohm">OHM</span>
+            <h3>Ohmie &mdash; Multi-Agent AI System</h3>
             <p>
-              FittedAI is a React Native app that uses the Gray Whale algorithm
-              to recommend outfits you’ll actually want to wear. It’s like
-              having a personal stylist in your pocket.
+              The AI agent at the heart of OHM. Ask it anything about
+              operational data &mdash; payments, invoices, service history,
+              client records &mdash; in plain English, and it orchestrates the
+              right agents with tool calling, knowledge extraction, and fuzzy
+              search to answer accurately. Extended across the platform:
+              worktype building, service diagnosis, scheduling next visits, and
+              parsing documents into service knowledge.
             </p>
             <div class="tech-tags">
-              <span>Django</span><span>ReactNative</span
-              ><span>Greywhale API</span><span>Expo</span>
+              <span>LLM Orchestration</span><span>Tool Calling</span
+              ><span>Python</span><span>Django</span><span>React</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#9889;</div>
+            <span class="project-org org-ohm">OHM</span>
+            <h3>OhmControl Platform</h3>
+            <p>
+              The operations command center: scheduling, monitoring, and
+              tracking every field service job for EV chargers and HVAC systems
+              across customers. Built with Next.js, React, and Django, powered
+              by Ohmie, with TanStack Query caching and context management that
+              cut response latency from 400ms to under 10ms.
+            </p>
+            <div class="tech-tags">
+              <span>Next.js</span><span>React</span><span>Django</span
+              ><span>TanStack Query</span><span>Supabase</span>
+            </div>
+            <a
+              href="https://ohmcontrol.com"
+              target="_blank"
+              class="project-link"
+              >&#128279; ohmcontrol.com</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#128241;</div>
+            <span class="project-org org-ohm">OHM</span>
+            <h3>Ohm Field &mdash; Technician Mobile App</h3>
+            <p>
+              React Native app shipped on the App Store and Play Store, used
+              daily by field technicians for on-site inspections and servicing.
+              Mapbox-powered unit maps, guided work flows, and real-time
+              diagnostic capture that feeds straight into customer-facing
+              reporting dashboards.
+            </p>
+            <div class="tech-tags">
+              <span>React Native</span><span>Expo</span><span>Mapbox</span
+              ><span>Supabase</span><span>Google Cloud</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#128268;</div>
+            <span class="project-org org-ohm">OHM</span>
+            <h3>Client Integration APIs</h3>
+            <p>
+              How enterprise clients talk to OHM: standardized REST endpoints
+              for station imports, inspection reporting, work order management,
+              inventory tracking, and technician scheduling &mdash; including a
+              full ChargePoint integration and a client-agnostic public API
+              serving 10,000+ work orders.
+            </p>
+            <div class="tech-tags">
+              <span>Django REST</span><span>Token Auth</span
+              ><span>PostgreSQL</span><span>Cloud Run</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#128218;</div>
+            <span class="project-org org-steam">Steam Works Studio</span>
+            <h3>RAG Document Intelligence</h3>
+            <p>
+              Full-stack document intelligence with Django &amp; LangChain:
+              parsing pipeline (Reducto, LlamaParse) over 1,000+ pages, OpenAI
+              embeddings, and vector search powering natural-language Q&amp;A.
+              Started with K-12 curriculum, grew into insurance, clinical, and
+              legal &mdash; 200+ daily users at sub-200ms.
+            </p>
+            <div class="tech-tags">
+              <span>Django</span><span>LangChain</span><span>OpenAI</span
+              ><span>Vector DB</span><span>Redis</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#129367;</div>
+            <span class="project-org org-hackathon">Hackathon</span>
+            <h3>Sous &mdash; AI Chef in Your iMessage</h3>
+            <p>
+              Text a photo of your grocery receipt; Sous stocks a virtual
+              pantry with AI-estimated expiry dates, suggests recipes that use
+              expiring items first, and replies with AI-generated videos of the
+              dish. FastAPI backend, vision models, iMessage transport, and
+              persistent memory for allergies and past meals.
+            </p>
+            <div class="tech-tags">
+              <span>FastAPI</span><span>Vision Models</span
+              ><span>HydraDB</span><span>iMessage</span>
+            </div>
+            <a
+              href="https://github.com/shivangraikar/Sous"
+              target="_blank"
+              class="project-link"
+              >&#128279; View on GitHub</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#129504;</div>
+            <span class="project-org org-personal">Personal</span>
+            <h3>Thought Clusters</h3>
+            <p>
+              Upload your ChatGPT or Claude conversation exports and see your
+              thinking as interactive bubble charts &mdash; topics, questioning
+              styles, AI personality patterns. Everything runs in the browser:
+              Transformers.js embeddings, WebLLM running Phi-3-mini locally,
+              K-means++ clustering, D3 visualization. Zero servers, total
+              privacy.
+            </p>
+            <div class="tech-tags">
+              <span>Transformers.js</span><span>WebLLM</span><span>D3.js</span
+              ><span>K-means++</span>
+            </div>
+            <a
+              href="https://github.com/shivangraikar/thought-clusters"
+              target="_blank"
+              class="project-link"
+              >&#128279; View on GitHub</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#128295;</div>
+            <span class="project-org org-personal">Learning</span>
+            <h3>NeetCode GPT &mdash; GPT From Scratch</h3>
+            <p>
+              A GPT built from first principles in PyTorch: neural net
+              primitives, backprop, attention, and the full transformer stack
+              &mdash; plus a BPE tokenizer, KV-cache for fast inference, and
+              grouped query attention. Because the best way to understand LLMs
+              is to build one.
+            </p>
+            <div class="tech-tags">
+              <span>PyTorch</span><span>Transformers</span
+              ><span>BPE Tokenizer</span><span>KV-Cache</span>
+            </div>
+            <a
+              href="https://github.com/shivangraikar/neetcode-gpt"
+              target="_blank"
+              class="project-link"
+              >&#128279; View on GitHub</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-icon">&#128087;</div>
+            <span class="project-org org-hackathon">Hackathon</span>
+            <h3>FittedAI &mdash; See It. Wear It. Love It.</h3>
+            <p>
+              React Native app that uses the Gray Whale recommendation
+              algorithm to suggest outfits you'll actually want to wear. A
+              personal stylist in your pocket, built against the clock with a
+              team.
+            </p>
+            <div class="tech-tags">
+              <span>React Native</span><span>Expo</span><span>Django</span
+              ><span>Greywhale API</span>
             </div>
             <a
               href="https://github.com/Charliemorrone/FittedAI"
@@ -269,119 +435,34 @@
             >
           </div>
           <div class="project-card">
-            <div class="project-icon">&#128218;</div>
-            <h3>RAG Document Intelligence</h3>
-            <p>
-              Full-stack RAG-powered system using Django &amp; LangChain for
-              natural-language querying across documents. Processes 1,000+ pages
-              with semantic search for education, insurance, and legal domains.
-            </p>
-            <div class="tech-tags">
-              <span>Django</span><span>LangChain</span><span>OpenAI</span
-              ><span>PostgreSQL</span>
-            </div>
-            <a
-              href="https://github.com/shivangraikar"
-              target="_blank"
-              class="project-link"
-              >&#128279; View on GitHub</a
-            >
-          </div>
-          <div class="project-card">
-            <div class="project-icon">&#9889;</div>
-            <h3>OhmControl Platform</h3>
-            <p>
-              Operations platform built with Next.js, React, and Django
-              providing real-time visibility into EV charger and HVAC
-              maintenance job scheduling. Reduced service-status lookup time by
-              40%.
-            </p>
-            <div class="tech-tags">
-              <span>Next.js</span><span>React</span><span>Django</span
-              ><span>Supabase</span>
-            </div>
-            <a
-              href="https://github.com/shivangraikar"
-              target="_blank"
-              class="project-link"
-              >&#128279; View on GitHub</a
-            >
-          </div>
-          <div class="project-card">
-            <div class="project-icon">&#</div>
-            <h3>Field Technician Mobile App</h3>
-            <p>
-              React Native mobile app for on-site inspections and servicing of
-              EV chargers and HVAC systems. Captures real-time diagnostic data
-              feeding into customer-facing dashboards.
-            </p>
-            <div class="tech-tags">
-              <span>React Native</span><span>Supabase</span
-              ><span>Google Cloud</span>
-            </div>
-            <a
-              href="https://github.com/shivangraikar"
-              target="_blank"
-              class="project-link"
-              >&#128279; View on GitHub</a
-            >
-          </div>
-          <div class="project-card">
             <div class="project-icon">&#128202;</div>
+            <span class="project-org org-research">Research</span>
             <h3>Cancer Treatment Visualization</h3>
             <p>
-              Interactive visualization tool for treatment outcome leaderboards
-              using University of Chicago datasets, enabling clinicians to
-              compare protocol efficacy across 5,000+ patient records.
+              Interactive leaderboard visualizations of treatment outcomes
+              built on University of Chicago datasets at UMass Boston's MPsych
+              Lab, letting clinicians compare protocol efficacy across 5,000+
+              patient records.
             </p>
             <div class="tech-tags">
-              <span>React</span><span>TypeScript</span><span>Node.js</span
-              ><span>D3.js</span>
+              <span>React</span><span>TypeScript</span><span>D3.js</span
+              ><span>MySQL</span>
             </div>
-            <a
-              href="https://github.com/shivangraikar"
-              target="_blank"
-              class="project-link"
-              >&#128279; View on GitHub</a
-            >
           </div>
           <div class="project-card">
             <div class="project-icon">&#128176;</div>
+            <span class="project-org org-cpi">Crane Payment Innovations</span>
             <h3>Transaction Verification System</h3>
             <p>
-              Validation system for cash and coin flows across 10,000+ devices
-              in casinos and vending machines. Processes $2M+ in daily
-              transactions with 99.9% accuracy.
+              Automated verification of cash and coin flows across 10,000+
+              devices in casinos and vending machines nationwide &mdash; $2M+
+              in daily transactions validated at 99.9% accuracy, with JUnit
+              suites automated through AWS Lambda workflows.
             </p>
             <div class="tech-tags">
-              <span>Java</span><span>Selenium</span><span>Jenkins</span
-              ><span>AWS</span>
+              <span>Java</span><span>Selenium</span><span>AWS Lambda</span
+              ><span>Elasticsearch</span>
             </div>
-            <a
-              href="https://github.com/shivangraikar"
-              target="_blank"
-              class="project-link"
-              >&#128279; View on GitHub</a
-            >
-          </div>
-          <div class="project-card">
-            <div class="project-icon">&#129302;</div>
-            <h3>Multi-Agent AI System</h3>
-            <p>
-              AI system for natural-language querying of operational data
-              including payments, invoices, service history, and client records.
-              Uses LLM orchestration and TanStack Query caching.
-            </p>
-            <div class="tech-tags">
-              <span>LLMs</span><span>TanStack Query</span><span>Python</span
-              ><span>React</span>
-            </div>
-            <a
-              href="https://github.com/shivangraikar"
-              target="_blank"
-              class="project-link"
-              >&#128279; View on GitHub</a
-            >
           </div>
         </div>
       </div>
@@ -506,6 +587,17 @@
               </p>
             </div>
             <div class="misc-card">
+              <h3>Hackathon Judge &mdash; AWS Builder Loft, San Francisco</h3>
+              <p>
+                Judged 40+ projects in the agentic AI and machine learning
+                space, shortlisting 5 winning teams. Sponsored by HydraDB,
+                Photon, RocketRide, and more.
+              </p>
+              <div class="tech-tags">
+                <span>Agentic AI</span><span>Machine Learning</span>
+              </div>
+            </div>
+            <div class="misc-card">
               <h3>Headstarter AI &ndash; Software Engineer Fellow</h3>
               <p>
                 Developed 4+ full-stack SaaS products using TypeScript, NextJS,
@@ -603,6 +695,184 @@
         </p>
         <div class="blog-grid">
           <a
+            href="https://medium.com/towards-artificial-intelligence/the-smallest-model-won-one-of-my-tests-and-other-things-benchmarks-wont-tell-you-af4337d4dff3"
+            target="_blank"
+            class="blog-card"
+          >
+            <div class="blog-thumbnail blog-thumb-ai">
+              <span>&#129514;</span>
+            </div>
+            <div class="blog-info">
+              <h3>
+                The Smallest Model Won One of My Tests, and Other Things
+                Benchmarks Won't Tell You
+              </h3>
+              <p class="blog-date">June 12, 2026 &bull; Towards AI</p>
+              <p>
+                I tested four Claude models on real-world tasks &mdash; no
+                benchmark datasets, just actual work &mdash; and the results
+                didn't follow the leaderboards.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://medium.com/@shivangraikar/documentation-is-no-longer-optional-its-how-your-ai-actually-works-5556e98a8151"
+            target="_blank"
+            class="blog-card"
+          >
+            <div class="blog-thumbnail blog-thumb-code">
+              <span>&#128209;</span>
+            </div>
+            <div class="blog-info">
+              <h3>
+                Documentation Is No Longer Optional: It's How Your AI Actually
+                Works
+              </h3>
+              <p class="blog-date">May 1, 2026</p>
+              <p>
+                Your docs aren't just for humans anymore &mdash; they're the
+                context your AI tools run on. Why writing things down became a
+                first-class engineering skill.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://medium.com/towards-artificial-intelligence/building-ai-apps-on-a-budget-how-i-pushed-supabases-free-tier-into-a-production-ai-system-c93a38ba397e"
+            target="_blank"
+            class="blog-card"
+          >
+            <div class="blog-thumbnail blog-thumb-data">
+              <span>&#128184;</span>
+            </div>
+            <div class="blog-info">
+              <h3>
+                Building AI Apps on a Budget: How I Pushed Supabase's Free Tier
+                Into a Production AI System
+              </h3>
+              <p class="blog-date">April 16, 2026 &bull; Towards AI</p>
+              <p>
+                Production AI doesn't have to start expensive. How far a free
+                tier can actually go when you architect around its limits.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://medium.com/towards-artificial-intelligence/from-prompt-to-production-what-nobody-tells-you-about-building-real-ai-agents-42fe49b5a945"
+            target="_blank"
+            class="blog-card"
+          >
+            <div class="blog-thumbnail blog-thumb-agent">
+              <span>&#129302;</span>
+            </div>
+            <div class="blog-info">
+              <h3>
+                From Prompt to Production: What Nobody Tells You About Building
+                Real AI Agents
+              </h3>
+              <p class="blog-date">April 11, 2026 &bull; Towards AI</p>
+              <p>
+                The gap between an agent demo and an agent your users rely on
+                is enormous. Lessons from shipping agentic systems for real
+                operations.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://medium.com/@shivangraikar/we-spent-40-minutes-staring-at-a-whiteboard-we-wrote-zero-lines-of-code-6ed76b204fa1"
+            target="_blank"
+            class="blog-card"
+          >
+            <div class="blog-thumbnail blog-thumb-mind">
+              <span>&#128221;</span>
+            </div>
+            <div class="blog-info">
+              <h3>
+                We Spent 40 Minutes Staring at a Whiteboard. We Wrote Zero
+                Lines of Code.
+              </h3>
+              <p class="blog-date">April 9, 2026</p>
+              <p>
+                Sometimes the most productive engineering session produces no
+                code at all. On the underrated craft of thinking before typing.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://medium.com/@shivangraikar/building-full-stack-apps-in-2026-architecture-scale-and-the-parts-ai-wont-do-for-you-cf60a3e28a65"
+            target="_blank"
+            class="blog-card"
+          >
+            <div class="blog-thumbnail blog-thumb-code">
+              <span>&#127959;&#65039;</span>
+            </div>
+            <div class="blog-info">
+              <h3>
+                Building Full-Stack Apps in 2026: Architecture, Scale, and the
+                Parts AI Won't Do for You
+              </h3>
+              <p class="blog-date">December 23, 2025</p>
+              <p>
+                AI writes a lot of code now &mdash; but architecture, scaling
+                decisions, and knowing what to build are still on you.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://medium.com/@shivangraikar/the-smartest-thing-about-ai-right-now-getting-smaller-c8326ecabc49"
+            target="_blank"
+            class="blog-card"
+          >
+            <div class="blog-thumbnail blog-thumb-ai">
+              <span>&#128300;</span>
+            </div>
+            <div class="blog-info">
+              <h3>The Smartest Thing About AI Right Now? Getting Smaller.</h3>
+              <p class="blog-date">December 16, 2025</p>
+              <p>
+                When AI hit the gym too hard: why smaller, specialized models
+                are quietly becoming the most interesting story in the field.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://medium.com/@shivangraikar/hidden-tech-behind-big-tech-and-now-ai-04a0a8be8410"
+            target="_blank"
+            class="blog-card"
+          >
+            <div class="blog-thumbnail blog-thumb-data">
+              <span>&#128269;</span>
+            </div>
+            <div class="blog-info">
+              <h3>Hidden Tech Behind Big Tech and Now AI</h3>
+              <p class="blog-date">September 4, 2025</p>
+              <p>
+                The unglamorous infrastructure that quietly powers everything
+                &mdash; and what it tells us about where AI is headed.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://medium.com/@shivangraikar/navigating-the-agentic-landscape-a-dive-into-ai-agents-and-leading-frameworks-6337ef7d7487"
+            target="_blank"
+            class="blog-card"
+          >
+            <div class="blog-thumbnail blog-thumb-agent">
+              <span>&#128506;&#65039;</span>
+            </div>
+            <div class="blog-info">
+              <h3>
+                Navigating the Agentic Landscape: A Dive into AI Agents and
+                Leading Frameworks
+              </h3>
+              <p class="blog-date">December 4, 2024</p>
+              <p>
+                A tour through the AI agent ecosystem &mdash; what agents
+                actually are, the leading frameworks, and how to pick between
+                them.
+              </p>
+            </div>
+          </a>
+          <a
             href="https://medium.com/@shivangraikar/building-a-flow-log-parser-da8644175be7"
             target="_blank"
             class="blog-card"
@@ -690,8 +960,14 @@
           <button class="suggestion-btn" data-q="Tell me about yourself">
             Tell me about yourself
           </button>
+          <button class="suggestion-btn" data-q="What is Ohmie?">
+            What is Ohmie?
+          </button>
           <button class="suggestion-btn" data-q="What's your tech stack?">
             What's your tech stack?
+          </button>
+          <button class="suggestion-btn" data-q="Do you write?">
+            Do you write?
           </button>
           <button
             class="suggestion-btn"
