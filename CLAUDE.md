@@ -1,9 +1,9 @@
 # shivangraikar.github.io — Windows XP Portfolio
 
-Personal portfolio of Shivang Raikar (shivangraikar@gmail.com), styled as a
-Windows XP desktop. Visitors double-click desktop icons to open draggable XP
-windows. Deployed via GitHub Pages from `main` (repo is private; CLAUDE.md is
-intentionally committed so context survives re-clones).
+Personal portfolio of Shivang Raikar, styled as a Windows XP desktop. Visitors
+double-click desktop icons to open draggable XP windows. Deployed via GitHub
+Pages from `main`. CLAUDE.md is intentionally committed so context survives
+re-clones; keep it free of anything private (it's a public repo).
 
 ## Architecture — keep it simple
 
@@ -37,13 +37,12 @@ deliberate. Do not introduce npm/bundlers unless Shivang explicitly asks.
 - The resume PDF itself carries the formal bullets.
 
 Key facts: Shivang is a **Founding Software Engineer at OHM** (San Francisco,
-Jan 2025–present; EV charger & HVAC field service). Main things he built there:
+Jan 2025–present; EV charger & HVAC field service). Main things built there:
 Ohmie (multi-agent AI), OhmControl (ops platform, ohmcontrol.com), Ohm Field
-(React Native app on both app stores), client integration APIs (ChargePoint +
-public API). OHM code lives in `~/Desktop/Ohm/` (private company repos — take
-only high-level inspiration from there, never details/secrets).
+(React Native app on both app stores), client integration APIs. Describe OHM
+work only at the level of the public resume/site — no internal details.
 
-Other sources of truth: resume PDF in this repo; GitHub (github.com/shivangraikar)
+Sources of truth: resume PDF in this repo; GitHub (github.com/shivangraikar)
 for personal projects (Sous, thought-clusters, neetcode-gpt, FittedAI);
 Medium (@shivangraikar, several posts in Towards AI) for the Blogs window.
 
