@@ -90,7 +90,12 @@
 
   function restoreDesktop() {
     targets.forEach(function (t) {
-      t.el.classList.remove("brick-poof", "boss-hit-1", "boss-hit-2", "brick-shake");
+      t.el.classList.remove(
+        "brick-poof",
+        "boss-hit-1",
+        "boss-hit-2",
+        "brick-shake",
+      );
       t.el.style.visibility = "";
     });
     document.body.classList.remove("breakout-active");
@@ -104,7 +109,7 @@
       xpDialog(
         "Breakout.exe",
         "This game needs a mouse and a big screen — it's best played on a computer. Everything else here works great on your phone though!",
-        [{ label: "OK", action: function () {} }]
+        [{ label: "OK", action: function () {} }],
       );
       return;
     }
@@ -142,7 +147,7 @@
     if (state !== "aiming") return;
     state = "playing";
     var b = balls[0];
-    var angle = (Math.random() * 0.6 - 0.3) - Math.PI / 2; // mostly upward
+    var angle = Math.random() * 0.6 - 0.3 - Math.PI / 2; // mostly upward
     b.vx = Math.cos(angle) * b.speed;
     b.vy = Math.sin(angle) * b.speed;
     nextDropAt = performance.now() + 6000 + Math.random() * 5000;
@@ -194,7 +199,7 @@
         [
           { label: "Play again", action: startGame },
           { label: "Close", action: function () {} },
-        ]
+        ],
       );
     }
   }
@@ -232,11 +237,7 @@
 
   function step(dt, now) {
     // Spawn a power drop from the sky
-    if (
-      now > nextDropAt &&
-      drops.length === 0 &&
-      balls.length < MAX_BALLS
-    ) {
+    if (now > nextDropAt && drops.length === 0 && balls.length < MAX_BALLS) {
       drops.push({
         x: 60 + Math.random() * (canvas.width - 120),
         y: -DROP_H,
@@ -411,20 +412,14 @@
         0,
         drop.y - DROP_H / 2,
         0,
-        drop.y + DROP_H / 2
+        drop.y + DROP_H / 2,
       );
       dg.addColorStop(0, "#ffd76e");
       dg.addColorStop(1, "#e8940a");
       ctx.fillStyle = dg;
       ctx.beginPath();
       if (ctx.roundRect) {
-        ctx.roundRect(
-          dx - DROP_W / 2,
-          drop.y - DROP_H / 2,
-          DROP_W,
-          DROP_H,
-          9
-        );
+        ctx.roundRect(dx - DROP_W / 2, drop.y - DROP_H / 2, DROP_W, DROP_H, 9);
       } else {
         ctx.rect(dx - DROP_W / 2, drop.y - DROP_H / 2, DROP_W, DROP_H);
       }
@@ -446,7 +441,7 @@
         1,
         ball.x,
         ball.y,
-        BALL_R
+        BALL_R,
       );
       bg.addColorStop(0, "#ffffff");
       bg.addColorStop(1, "#c0c0c0");
@@ -543,7 +538,7 @@
         fin.className = "finale-boot";
         fin.innerHTML =
           "<div class='finale-center'><div class='finale-logo'></div>" +
-          "<h2>Shivang<span>XP</span></h2>" +
+          "<h2>Portfolio<span>XP</span></h2>" +
           "<div class='boot-bar'><div class='boot-chunk'></div><div class='boot-chunk'></div><div class='boot-chunk'></div></div></div>";
         return 3000;
       },
@@ -560,11 +555,11 @@
             targets.length +
             " targets in " +
             timeStr +
-            ". The desktop has been rebuilt — no engineers were harmed.",
+            ". The desktop has been rebuilt.",
           [
             { label: "Play again", action: startGame },
             { label: "Back to browsing", action: function () {} },
-          ]
+          ],
         );
         return -1;
       },
@@ -594,7 +589,7 @@
     lastMouseX = e.clientX;
     paddleX = Math.max(
       PADDLE_W / 2,
-      Math.min(e.clientX, window.innerWidth - PADDLE_W / 2)
+      Math.min(e.clientX, window.innerWidth - PADDLE_W / 2),
     );
   });
 
