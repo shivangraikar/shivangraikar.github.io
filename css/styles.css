@@ -138,7 +138,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80px;
+  width: 88px;
   padding: 6px 4px;
   border-radius: 4px;
   cursor: pointer;
@@ -1209,6 +1209,396 @@ a {
   }
 }
 
+/* ========== WORK EXPERIENCE (short form) ========== */
+.workex-intro {
+  font-size: 12px;
+  color: #555;
+  background: #fdf6d8;
+  border: 1px solid #e6d98a;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.job-blurb {
+  font-size: 12px;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.job-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.job-project {
+  font-size: 12px;
+  color: #333;
+  padding: 4px 8px;
+  background: #fff;
+  border: 1px solid #e0ddd4;
+  border-radius: 3px;
+  line-height: 1.4;
+}
+
+.jp-icon {
+  margin-right: 4px;
+}
+
+/* ========== PROJECT ORG BADGES ========== */
+.project-org {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.org-ohm {
+  background: #e3f6e6;
+  border: 1px solid #6dbf7b;
+  color: #1e6b2d;
+}
+
+.org-steam {
+  background: #fdeee0;
+  border: 1px solid #e0a468;
+  color: #8a4b12;
+}
+
+.org-hackathon {
+  background: #fdf0d8;
+  border: 1px solid #e6c15a;
+  color: #8a6508;
+}
+
+.org-personal {
+  background: #e8f0fe;
+  border: 1px solid #8eade6;
+  color: #1a3d80;
+}
+
+.org-research {
+  background: #f0e8fa;
+  border: 1px solid #b48ee6;
+  color: #4b1a80;
+}
+
+.org-cpi {
+  background: #f0f0ee;
+  border: 1px solid #b0aca0;
+  color: #55524a;
+}
+
+/* ========== PDF ICON (CSS-drawn) ========== */
+.pdf-icon {
+  width: 48px;
+  height: 40px;
+  position: relative;
+}
+
+.pdf-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 32px;
+  height: 40px;
+  background: linear-gradient(180deg, #fff, #ece9e0);
+  border: 1px solid #888;
+  border-radius: 2px 8px 2px 2px;
+}
+
+.pdf-icon::after {
+  content: "PDF";
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  width: 24px;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+  background: #c9301a;
+  border-radius: 2px;
+  padding: 1px 0;
+}
+
+/* Emoji-based desktop icons (games) */
+.mine-icon,
+.cards-icon {
+  width: 48px;
+  height: 40px;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.smi-emoji {
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Extra blog thumbnails */
+.blog-thumb-ai {
+  background: linear-gradient(135deg, #533483, #0f3460);
+}
+
+.blog-thumb-agent {
+  background: linear-gradient(135deg, #1a5e63, #16213e);
+}
+
+/* ========== MINESWEEPER ========== */
+.mine-body {
+  background: #ece9d8 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+}
+
+.mine-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 280px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #808080 #fff #fff #808080;
+  padding: 6px 8px;
+  margin-bottom: 8px;
+}
+
+.mine-counter {
+  background: #000;
+  color: #f00;
+  font-family: "Courier New", monospace;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 4px;
+  letter-spacing: 2px;
+}
+
+.mine-face {
+  font-size: 20px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #fff #808080 #808080 #fff;
+  cursor: pointer;
+  padding: 2px 4px;
+  line-height: 1;
+}
+
+.mine-face:active {
+  border-color: #808080 #fff #fff #808080;
+}
+
+.mine-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 28px);
+  grid-auto-rows: 28px;
+  background: #c0c0c0;
+  border: 3px solid;
+  border-color: #808080 #fff #fff #808080;
+}
+
+.mine-cell {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Courier New", monospace;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #fff #808080 #808080 #fff;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.mine-cell.open {
+  border: 1px solid #9a9a9a;
+  background: #d4d0c8;
+  cursor: default;
+}
+
+.mine-cell.boom {
+  background: #e74c3c;
+}
+
+.mine-cell.n1 { color: #0000ff; }
+.mine-cell.n2 { color: #007b00; }
+.mine-cell.n3 { color: #ff0000; }
+.mine-cell.n4 { color: #00007b; }
+.mine-cell.n5 { color: #7b0000; }
+.mine-cell.n6 { color: #007b7b; }
+.mine-cell.n7 { color: #000; }
+.mine-cell.n8 { color: #7b7b7b; }
+
+.mine-hint {
+  font-size: 11px;
+  color: #555;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.mine-flag-toggle {
+  display: block;
+  margin: 4px auto 0;
+  font-size: 11px;
+  background: #ece9d8;
+  border: 1px solid #aca899;
+  border-radius: 3px;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+
+.mine-flag-toggle.on {
+  background: #ffe8a0;
+  border-color: #c8a030;
+}
+
+/* ========== SOLITAIRE ========== */
+.sol-body {
+  background: #0a7c3e !important;
+  padding: 14px;
+  overflow-x: auto;
+}
+
+.sol-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 12px;
+}
+
+.sol-stock-area {
+  display: flex;
+  gap: 12px;
+}
+
+.sol-foundations {
+  display: flex;
+  gap: 12px;
+}
+
+.sol-pile {
+  width: 68px;
+  height: 96px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.sol-stock {
+  cursor: pointer;
+}
+
+.sol-recycle,
+.sol-ace {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.sol-tableau {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.sol-tab-pile {
+  height: auto;
+  border-color: transparent;
+}
+
+.sol-tab-pile.empty {
+  border-color: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  min-height: 96px !important;
+}
+
+.sol-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 92px;
+  background: #fff;
+  border: 1px solid #666;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  user-select: none;
+}
+
+.sol-waste .sol-card,
+.sol-foundation .sol-card,
+.sol-stock .sol-card {
+  top: 0;
+}
+
+.sol-card.face-down {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #2264d1 0,
+      #2264d1 4px,
+      #1a4ea0 4px,
+      #1a4ea0 8px
+    );
+}
+
+.sol-card.selected {
+  outline: 3px solid #ffd700;
+  outline-offset: -1px;
+}
+
+.sol-card.red {
+  color: #d40000;
+}
+
+.sol-card.black {
+  color: #111;
+}
+
+.sol-corner {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sol-center {
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  font-size: 26px;
+}
+
+.sol-hint {
+  margin-top: 14px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .desktop {
@@ -1231,10 +1621,36 @@ a {
 
   .desktop-icons {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     padding-right: 0;
     gap: 4px;
+  }
+
+  .sol-pile {
+    width: 44px;
+    height: 64px;
+  }
+
+  .sol-card {
+    width: 42px;
+    height: 62px;
+  }
+
+  .sol-center {
+    font-size: 16px;
+  }
+
+  .sol-corner {
+    font-size: 10px;
+  }
+
+  .sol-top,
+  .sol-tableau,
+  .sol-stock-area,
+  .sol-foundations {
+    gap: 6px;
   }
 
   .xp-window {
@@ -1278,7 +1694,7 @@ a {
 
 @media (max-width: 480px) {
   .desktop-icon {
-    width: 64px;
+    width: 80px;
   }
 
   .folder-icon {
