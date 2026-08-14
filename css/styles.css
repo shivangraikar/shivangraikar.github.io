@@ -68,7 +68,7 @@ a {
   border: 1px solid rgba(100, 200, 255, 0.2);
   border-radius: 8px;
   padding: 20px 28px;
-  max-width: 540px;
+  max-width: 670px;
   box-shadow:
     0 4px 24px rgba(0, 0, 0, 0.4),
     inset 0 0 30px rgba(100, 200, 255, 0.03);
@@ -1490,14 +1490,30 @@ a {
   background: #e74c3c;
 }
 
-.mine-cell.n1 { color: #0000ff; }
-.mine-cell.n2 { color: #007b00; }
-.mine-cell.n3 { color: #ff0000; }
-.mine-cell.n4 { color: #00007b; }
-.mine-cell.n5 { color: #7b0000; }
-.mine-cell.n6 { color: #007b7b; }
-.mine-cell.n7 { color: #000; }
-.mine-cell.n8 { color: #7b7b7b; }
+.mine-cell.n1 {
+  color: #0000ff;
+}
+.mine-cell.n2 {
+  color: #007b00;
+}
+.mine-cell.n3 {
+  color: #ff0000;
+}
+.mine-cell.n4 {
+  color: #00007b;
+}
+.mine-cell.n5 {
+  color: #7b0000;
+}
+.mine-cell.n6 {
+  color: #007b7b;
+}
+.mine-cell.n7 {
+  color: #000;
+}
+.mine-cell.n8 {
+  color: #7b7b7b;
+}
 
 .mine-hint {
   font-size: 11px;
@@ -1609,14 +1625,13 @@ a {
 }
 
 .sol-card.face-down {
-  background:
-    repeating-linear-gradient(
-      45deg,
-      #2264d1 0,
-      #2264d1 4px,
-      #1a4ea0 4px,
-      #1a4ea0 8px
-    );
+  background: repeating-linear-gradient(
+    45deg,
+    #2264d1 0,
+    #2264d1 4px,
+    #1a4ea0 4px,
+    #1a4ea0 8px
+  );
 }
 
 .sol-card.selected {
@@ -1670,7 +1685,13 @@ a {
   left: 4px;
   width: 40px;
   height: 36px;
-  background: linear-gradient(180deg, #4d94f7 0%, #2264d1 12%, #000 12%, #0a0a0a 100%);
+  background: linear-gradient(
+    180deg,
+    #4d94f7 0%,
+    #2264d1 12%,
+    #000 12%,
+    #0a0a0a 100%
+  );
   border: 1px solid #555;
   border-radius: 3px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
