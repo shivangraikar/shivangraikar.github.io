@@ -1,5 +1,5 @@
 // ============================================
-// NERDY WALLPAPER — Animated CS Background
+// NERDY WALLPAPER , Animated CS Background
 // ============================================
 
 (function () {
@@ -336,8 +336,8 @@
 })();
 
 // ============================================
-// PORTFOLIO — Shivang Raikar
-// Windows XP Desktop — Window Management
+// PORTFOLIO , Shivang Raikar
+// Windows XP Desktop , Window Management
 // ============================================
 
 (function () {
@@ -602,7 +602,7 @@
 })();
 
 // ============================================
-// INTERVIEW ME — Interactive Q&A Chatbot
+// INTERVIEW ME , Interactive Q&A Chatbot
 // ============================================
 
 (function () {
@@ -610,46 +610,46 @@
 
   var answers = {
     "tell me about yourself":
-      "I'm Shivang, a founding software engineer at OHM in San Francisco. I went from Mumbai to Boston to the Bay Area, picking up a CS master's and an unhealthy caffeine dependency along the way. I take products from an empty repo to real users: I've shipped a mobile app to the App Store and Play Store, built multi-agent AI systems, designed client-facing APIs, and set up the CI/CD and deployment pipelines that keep it all running. I think the best code is the code you never have to explain twice, and the best engineers are the ones who stay curious. When I'm not coding, you'll find me playing whatever sport has room for one more, cooking, dancing, at the gym — or DJing at a party for fun.",
+      "I'm Shivang, a founding software engineer at OHM in San Francisco. I went from Mumbai to Boston to the Bay Area, picking up a CS master's and an unhealthy caffeine dependency along the way. I've shipped a mobile app to the App Store and Play Store, built multi-agent AI systems, designed client-facing APIs, and set up the CI/CD and deployment pipelines that keep it all running. I think the best code is the code you never have to explain twice, and the best engineers are the ones who stay curious. When I'm not coding, you'll find me playing whatever sport has room for one more, cooking, dancing, at the gym , or DJing at a party for fun.",
 
     "what is ohmie?":
-      "Ohmie is OHM's AI agent — and honestly my favorite thing I've built. It started as a multi-agent system for querying operational data in plain English: payments, invoices, service history, client records. Ask 'show me overdue invoices from last month' and it orchestrates the right agents, calls the right tools, and pulls accurate answers with fuzzy knowledge extraction. Then we kept extending it: building worktypes, diagnosing service issues, scheduling next visits, parsing documents into service knowledge, summarizing logistics for clients. It's woven through the whole platform now — the web app, the APIs, the field workflows.",
+      "Ohmie is OHM's AI agent , and honestly my favorite thing I've built. It started as a multi-agent system for querying operational data in plain English: payments, invoices, service history, client records. Ask 'show me overdue invoices from last month' and it orchestrates the right agents, calls the right tools, and pulls accurate answers with fuzzy knowledge extraction. Then we kept extending it: building worktypes, diagnosing service issues, scheduling next visits, parsing documents into service knowledge, summarizing logistics for clients. It's woven through the whole platform now , the web app, the APIs, the field workflows.",
 
     "what's your tech stack?":
-      "My go-to stack: React/Next.js on the frontend, Python (Django/FastAPI) on the backend, React Native with Expo for mobile, PostgreSQL/Supabase for data, and GCP/AWS for cloud. For AI work: LLM orchestration, LangChain, OpenAI and Anthropic APIs, vector databases, RAG pipelines. Add TypeScript, Redis, Docker, TanStack Query, Zustand, and CI/CD tooling — plus Claude Code as a daily driver. I don't have religious wars about frameworks; I pick the right tool for the job. Except for tabs vs spaces. Tabs. Always tabs.",
+      "My go-to stack: React/Next.js on the frontend, Python (Django/FastAPI) on the backend, React Native with Expo for mobile, PostgreSQL/Supabase for data, and GCP/AWS for cloud. For AI work: LLM orchestration, LangChain, OpenAI and Anthropic APIs, vector databases, RAG pipelines. Add TypeScript, Redis, Docker, TanStack Query, Zustand, and CI/CD tooling , plus Claude Code as a daily driver. I don't have religious wars about frameworks; I pick the right tool for the job. Except for tabs vs spaces. Tabs. Always tabs.",
 
     "what are you working on right now?":
-      "I'm on the founding team at OHM, where I've built most of our product surface: Ohmie, our multi-agent AI for querying operational data in plain English; OhmControl, the operations platform that schedules, monitors, and tracks every field service job; the Ohm Field mobile app that technicians use on-site for EV charger and HVAC servicing — live on both app stores; and the integration APIs enterprise clients use to exchange work orders and inspection data with us. Being early at a startup means you own things end to end: architecture, code, deployment, monitoring, and the 2am 'is prod okay?' checks.",
+      "I'm on the founding team at OHM, where I've built most of our product surface: Ohmie, our multi-agent AI for querying operational data in plain English; OhmControl, the operations platform that schedules, monitors, and tracks every field service job; the Ohm Field mobile app that technicians use on-site for EV charger and HVAC servicing , live on both app stores; and the integration APIs enterprise clients use to exchange work orders and inspection data with us. Being early at a startup means you own things end to end: architecture, code, deployment, monitoring, and the 2am 'is prod okay?' checks.",
 
     "what's your proudest project?":
-      "Ohmie, OHM's AI agent. I got to architect a multi-agent system from scratch and watch it become the connective tissue of the whole product — answering operational questions, diagnosing service issues, scheduling visits, parsing documents into knowledge. Close second: the RAG document intelligence system at Steam Works Studio, which went from 'search thousands of PDF pages by hand' to natural-language answers for 200+ daily users at sub-200ms. Both had that same arc: messy real-world problem, skeptical users, and then the moment it just works. That arc is why I do this job.",
+      "Ohmie, OHM's AI agent. I got to architect a multi-agent system from scratch and watch it become the connective tissue of the whole product, answering operational questions, diagnosing service issues, scheduling visits, parsing documents into knowledge. Close second: the RAG document intelligence system at Steam Works Studio, which went from 'search thousands of PDF pages by hand' to natural-language answers for 200+ daily users at sub-200ms. Both had that same arc: messy real-world problem, skeptical users, and then the moment it just works. That arc is why I do this job.",
 
     "why should we hire you?":
-      "Three reasons: First, I ship — as a founding engineer I've taken products from empty repo to app stores and production, not just whiteboards. Second, I cover the whole surface: frontend, backend, mobile, APIs, databases, CI/CD, cloud deployment, and the AI layer on top — and I've done it where there was no one else to hand things off to. Third, I actually care about the product, not just the code. The best engineers ask 'does this solve the user's problem?' before 'does this pass the linter?' Also, I write great commit messages. Mostly.",
+      "Three reasons: First, I ship , as a founding engineer I've taken products from empty repo to app stores and production, not just whiteboards. Second, I cover the whole surface: frontend, backend, mobile, APIs, databases, CI/CD, cloud deployment, and the AI layer on top , and I've done it where there was no one else to hand things off to. Third, I actually care about the product, not just the code. The best engineers ask 'does this solve the user's problem?' before 'does this pass the linter?' Also, I write great commit messages. Mostly.",
 
     "what do you do outside of coding?":
-      "I'm a multi-sport personality — if there's a game going, any field or court, count me in. I'm committed to the gym (lifting keeps me disciplined), I cook — start with a recipe, trust the taste tests, ship the dish — and I dance. At parties I'll sometimes take over the decks and DJ, strictly for fun. I also write about AI and engineering on Medium, and I still do the occasional hackathon — most recently judging one at AWS Builder Loft.",
+      "I am a huge soccer fan and a multi-sport personality, if there's a game going, any field or court, I am always down to play. I'm committed to the gym (lifting keeps me disciplined), I cook , start with a recipe, trust the taste tests, ship the dish , and I dance. At parties I'll sometimes take over the decks and DJ, strictly for fun. I also write about AI and engineering on Medium, and I still do the occasional hackathon , most recently judging one at AWS Builder Loft.",
 
     "what's a fun fact about you?":
-      "There's basically no sport I'll say no to — I'm the guy who joins any game that needs one more player. Off the field I cook, dance, hit the gym, and at a party I might take over the decks and DJ for fun. Career bonus fact: I co-authored an IEEE paper on machine learning back in undergrad, so technically I was doing 'AI' before it was cool.",
+      "There's basically no sport I'll say no to. Besides that, I cook, dance, hit the gym, and at a party I might take over the decks and DJ for fun.",
 
     "how do you approach debugging?":
       "Step 1: Don't panic. Step 2: Read the error message. (You'd be surprised how many people skip this.) Step 3: Reproduce it. If I can't reproduce it, it didn't happen. Step 4: Binary search the problem, comment out half the code, see if it still breaks, narrow down. Step 5: Rubber duck it. Explain the problem out loud. If the duck doesn't help, I explain it to a colleague. Step 6: If all else fails, take a walk. Some of my best fixes came to me while making coffee. The real secret? Most bugs are just wrong assumptions, so I question everything I 'know' about the code.",
 
     "what's your experience with ai?":
-      "It's my core focus. At OHM I architected Ohmie, a production multi-agent system — LLM orchestration, tool calling, knowledge extraction — that runs real operations, not demos. At Steam Works Studio I built a full RAG pipeline: document parsing with Reducto and LlamaParse, OpenAI embeddings, vector storage, semantic search for 200+ daily users. On the side I've built a GPT from scratch in PyTorch (tokenizer, attention, KV-cache, the works), analyzed AI conversations with in-browser models, and I write about agents and model evaluation on Medium. Certified AWS AI Practitioner and OCI Generative AI Professional. I also have a research background in ML and reinforcement learning — this space is exactly where I want to be.",
+      "It's my core focus. At OHM I architected Ohmie, a production multi-agent system , LLM orchestration, tool calling, knowledge extraction , that runs real operations, not demos. At Steam Works Studio I built a full RAG pipeline: document parsing with Reducto and LlamaParse, OpenAI embeddings, vector storage, semantic search for 200+ daily users. On the side I've built a GPT from scratch in PyTorch (tokenizer, attention, KV-cache, the works), analyzed AI conversations with in-browser models, and I write about agents and model evaluation on Medium. Certified AWS AI Practitioner and OCI Generative AI Professional. I also have a research background in ML and reinforcement learning , this space is exactly where I want to be.",
 
     "do you write?":
-      "Yes! I write about AI and software engineering on Medium, and several of my pieces have been published in Towards AI. Recent ones: benchmarking Claude models on real-world tasks instead of leaderboards, pushing Supabase's free tier into a production AI system, what nobody tells you about building real AI agents, and why documentation is now how your AI actually works. Writing forces me to actually understand what I think I know — half my posts start as 'wait, why did that work?' moments on the job. Check the Blogs folder on the desktop for the full list.",
+      "Yes! I write about AI and software engineering on Medium, and several of my pieces have been published in Towards AI. Recent ones: benchmarking Claude models on real-world tasks instead of leaderboards, pushing Supabase's free tier into a production AI system, what nobody tells you about building real AI agents, and why documentation is now how your AI actually works. Writing forces me to actually understand what I think I know , half my posts start as 'wait, why did that work?' moments on the job. Check the Blogs folder on the desktop for the full list.",
 
     "tell me about your education":
-      "I've got a Master's in Computer Science from UMass Boston and a Bachelor's in Computer Engineering from University of Mumbai. The MS gave me a deep dive into systems, algorithms, and research — I worked at the MPsych Lab building visualization tools for cancer treatment data across 5,000+ patient records. The undergrad in Mumbai is where I caught the engineering bug, published my first research paper, and realized that hackathons are basically extreme sports for nerds.",
+      "I've got a Master's in Computer Science from UMass Boston and a Bachelor's in Computer Engineering from University of Mumbai. The MS gave me a deep dive into systems, algorithms, and research , I worked at the MPsych Lab building visualization tools for cancer treatment data across 5,000+ patient records. The undergrad in Mumbai is where I caught the engineering bug, published my first research paper, and realized that hackathons are basically extreme sports for nerds.",
 
     "what certifications do you have?":
-      "I hold three: AWS AI Practitioner, HackerRank Software Engineer, and Oracle Cloud Generative AI Professional. I'm a big believer in continuous learning — the tech landscape moves too fast to get comfortable. Certifications aren't everything, but they're a good way to validate that you actually know the things you claim to know on your resume.",
+      "I hold three: AWS AI Practitioner, HackerRank Software Engineer, and Oracle Cloud Generative AI Professional. I'm a big believer in continuous learning , the tech landscape moves too fast to get comfortable. Certifications aren't everything, but they're a good way to validate that you actually know the things you claim to know on your resume.",
 
     "can you tell me about your research?":
-      "I co-authored 'Twitter Data Mining for Targeted Marketing,' published at IEEE's ICIRCA 2020 conference — machine learning and NLP on Twitter data to find patterns for targeted campaigns. It was my first dive into ML and got me hooked on intelligent systems; I've since built on that with a background in reinforcement learning. At UMass Boston's MPsych Lab, I did research engineering on cancer patient data using University of Chicago datasets, building treatment outcome visualizations clinicians could actually use across 5,000+ patient records.",
+      "I co-authored 'Twitter Data Mining for Targeted Marketing,' published at IEEE's ICIRCA 2020 conference , machine learning and NLP on Twitter data to find patterns for targeted campaigns. It was my first dive into ML and got me hooked on intelligent systems; I've since built on that with a background in reinforcement learning. At UMass Boston's MPsych Lab, I did research engineering on cancer patient data using University of Chicago datasets, building treatment outcome visualizations clinicians could actually use across 5,000+ patient records.",
   };
 
   // Fuzzy match
