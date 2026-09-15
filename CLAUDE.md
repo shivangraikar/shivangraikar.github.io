@@ -23,6 +23,18 @@ deliberate. Do not introduce npm/bundlers unless Shivang explicitly asks.
   ShivangXP shutdown/reboot finale; 3 drops → game over. Desktop-only (mobile
   gets an XP dialog). Elements hide via `visibility` (keeps layout) and
   restore after.
+- `js/analytics.js` — GA4 custom events (tag `G-8QSYZQE5W4` is in `<head>`).
+  Pure event delegation + MutationObservers, so no `onclick` attrs in HTML and
+  no changes to game files. Events: `window_open`, `start_menu_open`,
+  `github_click` / `linkedin_click` / `medium_click` / `email_click` /
+  `app_store_click` / `outbound_click` (with `link_location`), `project_click`
+  (`project_name`, `project_org`), `blog_click` (`blog_title`),
+  `resume_download`, `interview_question` (`question`, `source`),
+  `minesweeper_win/lose`, `breakout_start/win/lose/blocked_mobile`.
+  Append `?ga_debug` to the URL to see events in GA4 DebugView. New windows,
+  cards, and dialogs are picked up automatically as long as they keep the
+  existing class names (`.project-card h3`, `.blog-card h3`, `.xp-dialog` titles
+  "Game over" / "Desktop restored").
 - `ShivangRaikar_Resume.pdf` — linked from the Resume.pdf desktop icon and start menu
 - `shivang.jpg` — profile photo
 
